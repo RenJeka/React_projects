@@ -6,6 +6,7 @@ import {
     Lesson1Component,
     Lesson2HostComponent
 } from "./barrel";
+import ClockComponent from "./components/Clock/Clock.component";
 
 interface IApp {
     // children?: JSX.Element|JSX.Element[];
@@ -21,6 +22,8 @@ class App extends React.Component<IApp> {
                 <Counter name={"Counter1"}/>
                 <hr/>
                 <Lesson2HostComponent/>
+                <hr/>
+                <ClockComponent/>
             </div>
         );
     }
