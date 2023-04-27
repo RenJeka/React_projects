@@ -18,13 +18,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./"
+//    "rootDir": "./src"
+    //    "paths": {
+//      "@barrel": ["./src/barrel.ts"],
+//      "@src/*": ["./src/*"],
+//      "@assets/*": ["./src/assets/*"],
+//      "@common/*": ["./src/common/*"],
+//      "@components/*": ["./src/components/*"]
+//    }
   },
   "include": [
     "src"
-  ],
-  "baseUrl": ".",
-  "paths": {
-    "@src/*": ["./src/*"]
-  }
+  ]
 }

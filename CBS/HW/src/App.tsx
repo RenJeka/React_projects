@@ -1,8 +1,7 @@
 import React from 'react';
-import './App.scss';
 import './assets/styles/pico.min.css';
-import Counter from "./Counter/Counter";
-import Lesson1Component from "./Lesson1Component/Lesson1Component";
+import './App.scss';
+import {Counter, Lesson1Component} from "./barrel";
 
 interface IApp {
     // children?: JSX.Element|JSX.Element[];
