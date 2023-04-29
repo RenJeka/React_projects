@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Counter, Lesson1Component, Lesson2Component, Lesson2HostComponent} from "../barrel";
+import {Counter, Lesson1Component, ColorString, ColorStringParent} from "../barrel";
 import ClockComponent from "../components/Clock/Clock.component";
 import ListComponent from "../components/List/list.component";
 
@@ -19,16 +19,17 @@ class PageComponent extends Component<Props, State> {
     render() {
         return (
             <div>
+                <h3>Lesson #1</h3>
                 <Lesson1Component myColor={"grey"} size={36}/>
-                <hr/>
+                <h4> Counter</h4>
                 <Counter name={"Counter1"}/>
                 <hr/>
-                <Lesson2HostComponent/>
-                <Lesson2Component/>
+                <h3>Lesson #2</h3>
+                <ColorStringParent/>
                 <hr/>
-                <ClockComponent/>
-                <hr/>
-                <ListComponent />
+                {/*<ClockComponent/>*/}
+                {/*<hr/>*/}
+                {/*<ListComponent />*/}
             </div>
         );
     }

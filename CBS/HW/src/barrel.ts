@@ -3,8 +3,8 @@ import reactWallpaper from "./assets/images/react_wallpaper.jpg"
 import { Color } from "./common/enum/Color"
 import Lesson1Component from "./components/Lesson1Component/Lesson1Component";
 import Counter from "./components/Counter/Counter";
-import Lesson2Component from "./components/lesson2/Lesson2Component/Lesson2Component";
-import Lesson2HostComponent from "./components/lesson2/Lesson2HostComponent/Lesson2HostComponent";
+import ColorString from "./components/lesson2/ColorString/ColorString";
+import ColorStringParent from "./components/lesson2/ColorStringParent/ColorStringParent";
 
 const images = {
     reactLogo: reactLogo,
@@ -15,7 +15,7 @@ export {
     images,
     Color,
     Lesson1Component,
-    Lesson2Component,
+    ColorString,
     Counter,
-    Lesson2HostComponent,
+    ColorStringParent,
 }

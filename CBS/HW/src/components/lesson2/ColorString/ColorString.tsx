@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Color} from '../../../barrel';
-import "./Lesson2Component.scss";
+import "./ColorString.scss";
 
 interface Props {
     phrase?: string,
@@ -12,7 +12,7 @@ interface State {
     iterator: IterableIterator<[Color, Color]>
 }
 
-class Lesson2Component extends Component<Props, State> {
+class ColorString extends Component<Props, State> {
 
     state = {
         currentColor: this.props.colorSet?.values().next().value,
@@ -20,8 +20,8 @@ class Lesson2Component extends Component<Props, State> {
     };
 
     static defaultProps: Props = {
-        colorSet: new Set([Color.BLACK, Color.WHITE, Color.GREY, Color.BLUE, Color.GREEN]),
-        phrase: 'lesson 2 default phrase'
+        colorSet: new Set([Color.WHITE, Color.YELLOW, Color.RED, Color.GREEN, Color.BLUE]),
+        phrase: 'Default color string phrase'
     };
 
     changeColor() {
@@ -45,6 +45,16 @@ class Lesson2Component extends Component<Props, State> {
         });
     }
 
+    resetColor() {
+        this.setState((state, props) => {
+            const newIterator = this.props.colorSet?.entries() as IterableIterator<[Color, Color]>;
+            return {
+                iterator: newIterator,
+                currentColor: newIterator?.next().value[0]
+            }
+        })
+    }
+
     render() {
         const {phrase} = this.props;
         return (
@@ -58,4 +68,4 @@ class Lesson2Component extends Component<Props, State> {
     }
 }
 
-export default Lesson2Component;
+export default ColorString;
