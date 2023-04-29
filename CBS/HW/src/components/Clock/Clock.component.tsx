@@ -11,10 +11,7 @@ interface State {
 class ClockComponent extends Component<Props, State> {
     public timerID: NodeJS.Timer | undefined;
 
-    constructor(props: Props) {
-        super(props);
-        this.state = {date: new Date()};
-    }
+    state:State  = {date: new Date()};
 
     componentDidMount() {
         this.timerID = setInterval(

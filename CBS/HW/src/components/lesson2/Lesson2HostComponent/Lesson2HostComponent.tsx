@@ -18,7 +18,9 @@ class Lesson2HostComponent extends Component<Props, State> {
     render() {
         return (
             <div>
-                <Lesson2Component/>
+                <Lesson2Component
+
+                />
             </div>
         );
     }

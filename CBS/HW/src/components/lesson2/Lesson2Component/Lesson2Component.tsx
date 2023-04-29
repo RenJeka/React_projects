@@ -14,13 +14,10 @@ interface State {
 
 class Lesson2Component extends Component<Props, State> {
 
-    constructor(props: Props) {
-        super(props);
-        this.state = {
-            currentColor: props.colorSet?.values().next().value,
-            iterator: props.colorSet?.entries() as IterableIterator<[Color, Color]>
-        };
-    }
+    state = {
+        currentColor: this.props.colorSet?.values().next().value,
+        iterator: this.props.colorSet?.entries() as IterableIterator<[Color, Color]>
+    };
 
     static defaultProps: Props = {
         colorSet: new Set([Color.BLACK, Color.WHITE, Color.GREY, Color.BLUE, Color.GREEN]),
@@ -49,9 +46,13 @@ class Lesson2Component extends Component<Props, State> {
     }
 
     render() {
+        const {phrase} = this.props;
         return (
-            <div style={{color: this.state.currentColor}} onClick={this.changeColor.bind(this)}>
-                {this.props.phrase}
+            <div
+                style={{color: this.state.currentColor}}
+                onClick={this.changeColor.bind(this)}
+            >
+                {phrase}
             </div>
         );
     }
