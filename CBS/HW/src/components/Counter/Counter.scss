@@ -1,4 +1,19 @@
-button {
-  width: 200px;
-  margin: 20px auto;
+
+.counter-container {
+  color: #e3ff64;
+  
+  p {
+    color: #e3ff64;
+  }
+}
+
+.counter-controls {
+  display: flex;
+  width: 500px;
+  margin: 0 auto;
+
+  button {
+    width: auto;
+    margin: 20px auto;
+  }
 }

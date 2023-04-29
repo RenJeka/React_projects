@@ -18,11 +18,15 @@ class Counter extends Component<Props, State> {
 
     render() {
         return (
-            <div>
+            <div className={'counter-container'}>
 
                 <p>{this.props.name}</p>
                 <p>{this.state.count}</p>
-                <button onClick={() => this.setState((prevState) => ({count: prevState.count + 1}))}> Increment</button>
+                <div className={'counter-controls'}>
+                    <button onClick={() => this.setState((prevState) => ({count: prevState.count + 1}))}> Increment</button>
+                    <button onClick={() => this.setState((prevState) => ({count: prevState.count - 1}))}> Decrement</button>
+                    <button onClick={() => this.setState(() => ({count: 0}))}> Reset</button>
+                </div>
             </div>
         );
     }
