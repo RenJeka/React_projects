@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Counter, Lesson1Component, ColorString, ColorStringParent} from "../barrel";
 import ClockComponent from "../components/Clock/Clock.component";
 import ListComponent from "../components/List/list.component";
+import PostsComponent from "../components/Posts/Posts.Component";
 
 interface Props {
 
@@ -30,6 +31,7 @@ class PageComponent extends Component<Props, State> {
                 {/*<ClockComponent/>*/}
                 {/*<hr/>*/}
                 {/*<ListComponent />*/}
+                <PostsComponent/>
             </div>
         );
     }
