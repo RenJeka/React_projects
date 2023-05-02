@@ -6,7 +6,10 @@ import {
     ColorStringParent,
     PostsComponent,
     ClockComponent,
-    ListComponent, PropsOutputComponent, WithChildrenComponent
+    ListComponent,
+    PropsOutputComponent,
+    WithChildrenComponent,
+    TitleComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -61,6 +64,8 @@ class PageComponent extends Component<Props, State> {
                     {/*<hr/>*/}
                     <PostsComponent/>
                 </details>
+
+                <TitleComponent title={"Default"}/>
 
             </div>
         );

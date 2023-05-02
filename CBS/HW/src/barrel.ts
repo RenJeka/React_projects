@@ -11,6 +11,7 @@ import ClockComponent from "./components/Clock/Clock.component";
 import PageComponent from "./pages/Page.component";
 import PropsOutputComponent from "./components/lesson2/PropsOutput/Props-output.component";
 import WithChildrenComponent from "./components/lesson2/WithChildren/WithChildren.component";
+import TitleComponent from "./components/Title/Title.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -29,5 +30,6 @@ export {
     ClockComponent,
     PageComponent,
     PropsOutputComponent,
-    WithChildrenComponent
+    WithChildrenComponent,
+    TitleComponent
 }
