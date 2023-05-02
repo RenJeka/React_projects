@@ -4,3 +4,18 @@
   justify-content: center;
   align-items: center;
 }
+
+details {
+  min-width: 50vw;
+}
+
+.flexInline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.bgGrey {
+  background-color: #474747;
+}

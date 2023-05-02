@@ -9,6 +9,8 @@ import PostsComponent from "./components/Posts/Posts.component";
 import ListComponent from "./components/List/list.component";
 import ClockComponent from "./components/Clock/Clock.component";
 import PageComponent from "./pages/Page.component";
+import PropsOutputComponent from "./components/lesson2/PropsOutput/Props-output.component";
+import WithChildrenComponent from "./components/lesson2/WithChildren/WithChildren.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -25,5 +27,7 @@ export {
     PostsComponent,
     ListComponent,
     ClockComponent,
-    PageComponent
+    PageComponent,
+    PropsOutputComponent,
+    WithChildrenComponent
 }

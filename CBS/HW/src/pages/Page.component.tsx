@@ -6,7 +6,7 @@ import {
     ColorStringParent,
     PostsComponent,
     ClockComponent,
-    ListComponent
+    ListComponent, PropsOutputComponent, WithChildrenComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -42,6 +42,13 @@ class PageComponent extends Component<Props, State> {
                         Lesson #2
                     </summary>
                     <ColorStringParent/>
+                    <div className={classes.flexInline}>
+                        <PropsOutputComponent text="Hello everybody!"/>
+                        <PropsOutputComponent text="Some text #2!"/>
+                    </div>
+                    <WithChildrenComponent>
+                        <span className={classes.bgGrey}>This is  &lt;span&gt; inside "WithChildren" component</span>
+                    </WithChildrenComponent>
                 </details>
 
                 <details>

@@ -1,0 +1,16 @@
+.wrapper {
+
+  max-width: 250px;
+  border: 2px solid #eeee6d;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 10px;
+
+  .text {
+    font-family: Caveat;
+    letter-spacing: 5px;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
