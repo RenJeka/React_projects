@@ -18,7 +18,7 @@ class App extends React.Component<Props> {
         return (
             <div className="App">
                 <PageComponent/>
-                <button onClick={() => dispatch(changeTitle("Change title from APP"))}>Change title from APP</button>
+                {/*<button onClick={() => dispatch(changeTitle("Change title from APP"))}>Change title from APP</button>*/}
             </div>
         );
     }

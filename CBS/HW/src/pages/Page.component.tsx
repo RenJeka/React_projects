@@ -9,7 +9,7 @@ import {
     ListComponent,
     PropsOutputComponent,
     WithChildrenComponent,
-    TitleComponent
+    TitleComponent, ReduxCounter
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -65,8 +65,15 @@ class PageComponent extends Component<Props, State> {
                     <PostsComponent/>
                 </details>
 
-                <TitleComponent title={"Default"}/>
+                <details>
+                    <summary>
+                        Lesson #5
+                    </summary>
 
+                    <TitleComponent title={"Default"}/>
+                    <ReduxCounter/>
+
+                </details>
             </div>
         );
     }

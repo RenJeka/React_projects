@@ -12,6 +12,7 @@ import PageComponent from "./pages/Page.component";
 import PropsOutputComponent from "./components/lesson2/PropsOutput/Props-output.component";
 import WithChildrenComponent from "./components/lesson2/WithChildren/WithChildren.component";
 import TitleComponent from "./components/Title/Title.component";
+import ReduxCounter from "./components/ReduxCounter/ReduxCounter.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -31,5 +32,6 @@ export {
     PageComponent,
     PropsOutputComponent,
     WithChildrenComponent,
-    TitleComponent
+    TitleComponent,
+    ReduxCounter
 }
