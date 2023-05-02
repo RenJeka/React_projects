@@ -2,23 +2,24 @@ import React, {Component} from 'react';
 import axios from "axios";
 import classes from "./Posts.component.module.scss"
 
+interface Post {
+    id:number,
+    userId: number,
+    title: string,
+    body:string
+}
 
 interface Props {
 }
 
 interface State {
-    posts: {
-        id:number,
-        userId: number,
-        title: string,
-        body:string
-    }[]
+    posts: Post[]
 }
 
 class PostsComponent extends Component<Props, State> {
 
-    state = {
-        posts: []
+    state:State  = {
+        posts: [] as Post[]
     }
 
     componentDidMount(): void {
@@ -33,8 +34,8 @@ class PostsComponent extends Component<Props, State> {
     render() {
         return (
             <ul className={classes.listWrapper}>
-                {/*{this.state.posts.map(post => <div key={post.id}>{post.title}</div>)}*/}
-                {this.setPosts(this.state.posts)}
+                {this.state.posts.map(post => <li key={post.id}>{post.title}</li>)}
+                {/*{this.setPosts(this.state.posts)}*/}
             </ul>
         );
     }
