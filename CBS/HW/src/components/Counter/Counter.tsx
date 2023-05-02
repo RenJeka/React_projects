@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import "./Counter.scss";
+import classes from "./Counter.module.scss";
 
 
 interface Props {
@@ -18,11 +18,11 @@ class Counter extends Component<Props, State> {
 
     render() {
         return (
-            <div className={'counter-container'}>
+            <div className={classes.counterContainer}>
 
                 <p>{this.props.name}</p>
                 <p>{this.state.count}</p>
-                <div className={'counter-controls'}>
+                <div className={classes.counterControls}>
                     <button onClick={() => this.setState((prevState) => ({count: prevState.count + 1}))}> Increment</button>
                     <button onClick={() => this.setState((prevState) => ({count: prevState.count - 1}))}> Decrement</button>
                     <button onClick={() => this.setState(() => ({count: 0}))}> Reset</button>

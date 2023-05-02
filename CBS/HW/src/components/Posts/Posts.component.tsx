@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from "axios";
-
+import classes from "./Posts.component.module.scss"
 
 
 interface Props {
@@ -27,20 +27,15 @@ class PostsComponent extends Component<Props, State> {
     }
 
     setPosts(posts: any[]) {
-        // const postTags = [];
-        // for (let i = 0; i < posts.length; i++) {
-        //     postTags.push(<p key={posts[i].id}>{posts[i].title}</p>)
-        // }
-        return posts.map(post => <div key={post.id}>{post.title}</div>)
+        return posts.map(post => <li key={post.id}>{post.title}</li>);
     }
 
     render() {
         return (
-            <div>
-                {/*{this.state.posts}*/}
+            <ul className={classes.listWrapper}>
                 {/*{this.state.posts.map(post => <div key={post.id}>{post.title}</div>)}*/}
                 {this.setPosts(this.state.posts)}
-            </div>
+            </ul>
         );
     }
 }

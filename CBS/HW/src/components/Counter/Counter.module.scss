@@ -1,5 +1,5 @@
 
-.counter-container {
+.counterContainer {
   color: #e3ff64;
   
   p {
@@ -7,8 +7,9 @@
   }
 }
 
-.counter-controls {
+.counterControls {
   display: flex;
+  flex-direction: row;
   width: 500px;
   margin: 0 auto;
 

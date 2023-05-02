@@ -1,7 +1,7 @@
 import React from 'react';
 import './assets/styles/pico.min.css';
 import './App.scss';
-import PageComponent from "./pages/Page.component";
+import {PageComponent} from "./barrel";
 
 interface IApp {
     // children?: JSX.Element|JSX.Element[];

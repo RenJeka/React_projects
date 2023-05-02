@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Color, ColorString} from '../../../barrel';
+import classes from "./ColorStringParent.module.scss";
 
 interface Props {
 
@@ -18,8 +19,11 @@ class ColorStringParent extends Component<Props, State> {
 
     render() {
         return (
-            <div>
-                <button onClick={() => {this.childComponent.resetColor()}}>Reset Color</button>
+            <div className={classes.wrapper}>
+                <button
+                    className={classes.btnReset}
+                    onClick={() => {this.childComponent.resetColor()}}
+                >Reset Color</button>
                 <ColorString
                     ref={(node) => { this.childComponent = node}}
                 />
