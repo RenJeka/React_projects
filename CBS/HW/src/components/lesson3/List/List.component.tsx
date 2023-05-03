@@ -5,9 +5,11 @@ interface Props {
     listItems?: string[];
     needSort?: boolean;
     needUnique?: boolean;
+    color?: string;
 }
 
 interface State {
+
 }
 
 class ListComponent extends Component<Props, State> {
@@ -50,17 +52,27 @@ class ListComponent extends Component<Props, State> {
         return clonedItems.map((item, index) => <li key={index}>{item}</li>)
     }
 
+    private changeColor() {
+        console.log('Need change color to ' + this.props.color + ' and make list from state');
+    }
+
     render() {
 
         const {listItems = [], needSort, needUnique} = this.props;
         return (
-            <ul className={classes.listWrapper}>
+            <div>
                 {
-                    (listItems.length > 0)
-                    ? this.getItemsList(listItems, needSort, needUnique)
-                    :  <span>No names passed!</span>
+                    this.props.color
+                    ? <button onClick={() => {this.changeColor()}}>Change Color</button> : ''
                 }
-            </ul>
+                <ul className={classes.listWrapper}>
+                    {
+                        (listItems.length > 0)
+                            ? this.getItemsList(listItems, needSort, needUnique)
+                            :  <span>No names passed!</span>
+                    }
+                </ul>
+            </div>
         );
     }
 }
