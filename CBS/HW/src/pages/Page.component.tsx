@@ -10,7 +10,7 @@ import {
     WithChildrenComponent,
     TitleComponent,
     ReduxCounter,
-    ListComponent
+    ListComponent, TwoListAndButtonComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -63,7 +63,13 @@ class PageComponent extends Component<Props, State> {
                     {/*<ClockComponent/>*/}
                     {/*<hr/>*/}
                     {/*<PostsComponent/>*/}
-                    <ListComponent names={["Davi", "Bernard", "Conar", "Aaron", "Jeka", "Kate", "Marry", "Darrius", "Eli", "Eryk", "Jaise", "Eoner"]}/>
+                    <ListComponent
+                        listItems={["Davi", "Davi", "Bernard", "Bernard", "Conar", "Conar", "Aaron", "Jeka", "Kate", "Marry", "Darrius", "Eli", "Eryk", "Jaise", "Eoner"]}
+                        needUnique={true}
+                        needSort={true}
+                    />
+                    <hr/>
+                    <TwoListAndButtonComponent listItems={["Davi", "Bernard", "Conar", "Aaron", "Jeka", "Kate", "Marry", "Darrius", "Eli", "Eryk", "Jaise", "Eoner"]}/>
                 </details>
 
                 <details>
