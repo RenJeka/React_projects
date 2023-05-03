@@ -6,10 +6,11 @@ import {
     ColorStringParent,
     PostsComponent,
     ClockComponent,
-    ListComponent,
     PropsOutputComponent,
     WithChildrenComponent,
-    TitleComponent, ReduxCounter
+    TitleComponent,
+    ReduxCounter,
+    ListComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -58,11 +59,11 @@ class PageComponent extends Component<Props, State> {
                     <summary>
                         Lesson #3
                     </summary>
+                    <Counter name={"Lesson 3 Counter: "}/>
                     {/*<ClockComponent/>*/}
                     {/*<hr/>*/}
-                    {/*<ListComponent />*/}
-                    {/*<hr/>*/}
-                    <PostsComponent/>
+                    {/*<PostsComponent/>*/}
+                    <ListComponent names={["Davi", "Bernard", "Conar", "Aaron", "Jeka", "Kate", "Marry", "Darrius", "Eli", "Eryk", "Jaise", "Eoner"]}/>
                 </details>
 
                 <details>

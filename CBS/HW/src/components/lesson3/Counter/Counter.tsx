@@ -18,10 +18,10 @@ class Counter extends Component<Props, State> {
 
     render() {
         return (
-            <div className={classes.counterContainer}>
+            <div className={[classes.counterContainer, classes.border].join(' ')}>
 
-                <p>{this.props.name}</p>
-                <p>{this.state.count}</p>
+                <p className={classes.counterName}>  {this.props.name}</p>
+                <span className={classes.counterCountNumber}>{this.state.count}</span>
                 <div className={classes.counterControls}>
                     <button onClick={() => this.setState((prevState) => ({count: prevState.count + 1}))}> Increment</button>
                     <button onClick={() => this.setState((prevState) => ({count: prevState.count - 1}))}> Decrement</button>

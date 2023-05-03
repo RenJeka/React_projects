@@ -1,0 +1,12 @@
+.listWrapper {
+  max-width: 150px;
+  max-height: 300px;
+  margin: 20px auto 0;
+  overflow: auto;
+
+  border: 2px dotted;
+
+  li {
+    list-style: circle;
+  }
+}

@@ -1,10 +1,22 @@
 
 .counterContainer {
+  margin: 0 auto;
+  max-width: 500px;
   color: #e3ff64;
   
-  p {
+  .counterName {
+    font-size: 1em;
     color: #e3ff64;
   }
+
+  .counterCountNumber {
+    font-size: 3em;
+    color: #e3ff64;
+  }
+}
+
+.border {
+  border: 2px dotted #c6fc6e;
 }
 
 .counterControls {
@@ -17,4 +29,6 @@
     width: auto;
     margin: 20px auto;
   }
+
+
 }
