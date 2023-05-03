@@ -14,6 +14,7 @@ import TitleComponent from "./components/Title/Title.component";
 import ReduxCounter from "./components/ReduxCounter/ReduxCounter.component";
 import ListComponent from "./components/lesson3/List/List.component";
 import TwoListAndButtonComponent from "./components/lesson3/TwoListAndButton/TwoListAndButton.component";
+import BtnDivClickComponent from "./components/lesson3/BtnDivClick/BtnDivClick.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -35,5 +36,6 @@ export {
     TitleComponent,
     ReduxCounter,
     ListComponent,
-    TwoListAndButtonComponent
+    TwoListAndButtonComponent,
+    BtnDivClickComponent
 }

@@ -10,7 +10,7 @@ import {
     WithChildrenComponent,
     TitleComponent,
     ReduxCounter,
-    ListComponent, TwoListAndButtonComponent
+    ListComponent, TwoListAndButtonComponent, BtnDivClickComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -70,6 +70,8 @@ class PageComponent extends Component<Props, State> {
                     />
                     <hr/>
                     <TwoListAndButtonComponent listItems={["Davi", "Bernard", "Conar", "Aaron", "Jeka", "Kate", "Marry", "Darrius", "Eli", "Eryk", "Jaise", "Eoner"]}/>
+
+                    <BtnDivClickComponent/>
                 </details>
 
                 <details>
