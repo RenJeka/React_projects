@@ -5,7 +5,7 @@ import Lesson1Component from "./components/Lesson1Component/Lesson1Component";
 import Counter from "./components/lesson3/Counter/Counter";
 import ColorString from "./components/lesson2/ColorString/ColorString";
 import ColorStringParent from "./components/lesson2/ColorStringParent/ColorStringParent";
-import PostsComponent from "./components/Posts/Posts.component";
+import TodosComponent from "./components/lesson4/Todos/Todos.component";
 import ClockComponent from "./components/Clock/Clock.component";
 import PageComponent from "./pages/Page.component";
 import PropsOutputComponent from "./components/lesson2/PropsOutput/Props-output.component";
@@ -31,7 +31,7 @@ export {
     ColorString,
     Counter,
     ColorStringParent,
-    PostsComponent,
+    TodosComponent,
     ClockComponent,
     PageComponent,
     PropsOutputComponent,

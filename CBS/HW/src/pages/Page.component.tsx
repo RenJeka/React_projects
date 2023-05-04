@@ -4,7 +4,6 @@ import {
     Lesson1Component,
     ColorString,
     ColorStringParent,
-    PostsComponent,
     ClockComponent,
     PropsOutputComponent,
     WithChildrenComponent,
@@ -15,7 +14,7 @@ import {
     BtnDivClickComponent,
     ShowHideComponent,
     ShowHideParentComponent,
-    DidUpdateCounterComponent
+    DidUpdateCounterComponent, TodosComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -67,7 +66,6 @@ class PageComponent extends Component<Props, State> {
                     <Counter name={"Lesson 3 Counter: "}/>
                     {/*<ClockComponent/>*/}
                     {/*<hr/>*/}
-                    {/*<PostsComponent/>*/}
                     <ListComponent
                         listItems={["Davi", "Davi", "Bernard", "Bernard", "Conar", "Conar", "Aaron", "Jeka", "Kate", "Marry", "Darrius", "Eli", "Eryk", "Jaise", "Eoner"]}
                         needUnique={true}
@@ -88,6 +86,7 @@ class PageComponent extends Component<Props, State> {
                     </summary>
                     <ShowHideParentComponent/>
                     <DidUpdateCounterComponent/>
+                    <TodosComponent/>
 
                 </details>
 
