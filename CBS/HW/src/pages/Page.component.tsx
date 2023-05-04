@@ -67,7 +67,9 @@ class PageComponent extends Component<Props, State> {
                         listItems={["Davi", "Davi", "Bernard", "Bernard", "Conar", "Conar", "Aaron", "Jeka", "Kate", "Marry", "Darrius", "Eli", "Eryk", "Jaise", "Eoner"]}
                         needUnique={true}
                         needSort={true}
-                        color={'orange'}
+                        // TODO: uncomment to check
+                        // color={'cyan'}
+                        // colors = {['green', 'yellow', 'lightblue', 'lightgrey', 'orange', 'pink']}
                     />
                     <hr/>
                     <TwoListAndButtonComponent listItems={["Davi", "Bernard", "Conar", "Aaron", "Jeka", "Kate", "Marry", "Darrius", "Eli", "Eryk", "Jaise", "Eoner"]}/>
