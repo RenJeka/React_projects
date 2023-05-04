@@ -38,6 +38,7 @@ class TodosComponent extends Component<Props, State> {
 
                 this.setState(
                     {
+                        users: this.groupTodosByUsers(res.data),
                         todos: res.data
                     })
                 }
@@ -58,11 +59,33 @@ class TodosComponent extends Component<Props, State> {
         })
     }
 
-    private getTodoLayout(todo: Todo) {
+    getTodosForUserLayout(userTodos: Todo[]) {
+        // return posts.map(post => <li key={post.id}>{post.title}</li>);
+        return userTodos.map((todo: Todo) => {
+            return <li key={'taskName_' + todo.id}>{todo.title}</li>
 
+            // return <div key={'todo_' + todo.id} className={classes.todo}>
+            //             <input key={'completed_' + todo.id} type="checkbox" defaultChecked={todo.completed}/>
+            //             <span key={'taskName_' + todo.id}>{todo.title}</span>
+            //         </div>
+        })
     }
 
-    private groupTodosByUsers(array: Todo[]) {
+    getUsersLayout() {
+        // return posts.map(post => <li key={post.id}>{post.title}</li>);
+        const usersLayout: any[] = [];
+        for (const usersLayoutKey in this.state.users) {
+            usersLayout.push(<div key={'user_' + usersLayoutKey} className={classes.user}>
+                            <ul key={'userTodos_' + usersLayoutKey}>
+                                {this.getTodosForUserLayout(this.state.users[usersLayoutKey])}
+                            </ul>
+                        </div>)
+        }
+
+        return usersLayout;
+    }
+
+    private groupTodosByUsers(array: Todo[]): Users {
         return array.reduce((result: Users, currentValue) => {
             (result[currentValue["userId"]] = result[currentValue["userId"]] || []).push(currentValue);
             // (result[currentValue["userId"]] = result[currentValue[key]] || []).push(
@@ -75,7 +98,7 @@ class TodosComponent extends Component<Props, State> {
     render() {
         return (
             <div className={classes.wrapper}>
-                {this.getTodosLayout()}
+                {this.getUsersLayout()}
                 {/*{this.setPosts(this.state.posts)}*/}
             </div>
         );
