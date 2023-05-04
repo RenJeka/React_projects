@@ -17,6 +17,7 @@ import TwoListAndButtonComponent from "./components/lesson3/TwoListAndButton/Two
 import BtnDivClickComponent from "./components/lesson3/BtnDivClick/BtnDivClick.component";
 import ShowHideComponent from "./components/lesson4/ShowHideParent/ShowHide/ShowHide.component";
 import ShowHideParentComponent from "./components/lesson4/ShowHideParent/ShowHideParent.component";
+import DidUpdateCounterComponent from "./components/lesson4/DidUpdateCounter/DidUpdateCounter.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -41,5 +42,6 @@ export {
     TwoListAndButtonComponent,
     BtnDivClickComponent,
     ShowHideComponent,
-    ShowHideParentComponent
+    ShowHideParentComponent,
+    DidUpdateCounterComponent
 }

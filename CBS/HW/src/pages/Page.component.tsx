@@ -10,7 +10,12 @@ import {
     WithChildrenComponent,
     TitleComponent,
     ReduxCounter,
-    ListComponent, TwoListAndButtonComponent, BtnDivClickComponent, ShowHideComponent, ShowHideParentComponent
+    ListComponent,
+    TwoListAndButtonComponent,
+    BtnDivClickComponent,
+    ShowHideComponent,
+    ShowHideParentComponent,
+    DidUpdateCounterComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -82,6 +87,7 @@ class PageComponent extends Component<Props, State> {
                         Lesson #4
                     </summary>
                     <ShowHideParentComponent/>
+                    <DidUpdateCounterComponent/>
 
                 </details>
 
