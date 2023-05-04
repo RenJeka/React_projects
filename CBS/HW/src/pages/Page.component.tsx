@@ -86,6 +86,15 @@ class PageComponent extends Component<Props, State> {
                     <ReduxCounter/>
 
                 </details>
+
+                <details>
+                    <summary>
+                        Lesson #6
+                    </summary>
+
+                    <PostsComponent/>
+
+                </details>
             </div>
         );
     }

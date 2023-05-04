@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import classes from "./Posts.component.module.scss"
+import {connect} from "react-redux";
+import {MyStore, StorePosts} from "../../redux/initialStore";
+import postActionCreator from "./posts.async.actions";
+import {Dispatch} from "redux";
 
 interface Post {
     id:number,
@@ -10,35 +14,41 @@ interface Post {
 }
 
 interface Props {
+    posts: StorePosts;
+    dispatch: any;
 }
 
-interface State {
-    posts: Post[]
-}
-
-class PostsComponent extends Component<Props, State> {
-
-    state:State  = {
-        posts: [] as Post[]
-    }
+class PostsComponent extends Component<Props> {
 
     componentDidMount(): void {
-        axios('https://jsonplaceholder.typicode.com/posts')
-            .then(res => this.setState({posts: res.data}))
+        this.props.dispatch(postActionCreator())
     }
 
-    setPosts(posts: any[]) {
-        return posts.map(post => <li key={post.id}>{post.title}</li>);
-    }
+    // setPosts(posts: any[]) {
+    //     return posts.map(post => <li key={post.id}>{post.title}</li>);
+    // }
 
     render() {
+
+        const {posts, loading} = this.props.posts;
+
+        console.log('posts', posts);
+        console.log('props', this.props);
+
+
         return (
             <ul className={classes.listWrapper}>
-                {this.state.posts.map(post => <li key={post.id}>{post.title}</li>)}
+                {posts.map(post => <li key={post.id}>{post.title}</li>)}
                 {/*{this.setPosts(this.state.posts)}*/}
             </ul>
         );
     }
 }
 
-export default PostsComponent;
+const mapStateToProps = (store: MyStore) => {
+    return {
+        posts: store.posts
+    }
+}
+
+export default connect(mapStateToProps)(PostsComponent);
