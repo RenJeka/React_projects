@@ -10,7 +10,7 @@ import {
     WithChildrenComponent,
     TitleComponent,
     ReduxCounter,
-    ListComponent, TwoListAndButtonComponent, BtnDivClickComponent
+    ListComponent, TwoListAndButtonComponent, BtnDivClickComponent, ShowHideComponent, ShowHideParentComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -75,6 +75,14 @@ class PageComponent extends Component<Props, State> {
                     <TwoListAndButtonComponent listItems={["Davi", "Bernard", "Conar", "Aaron", "Jeka", "Kate", "Marry", "Darrius", "Eli", "Eryk", "Jaise", "Eoner"]}/>
 
                     <BtnDivClickComponent/>
+                </details>
+
+                <details>
+                    <summary>
+                        Lesson #4
+                    </summary>
+                    <ShowHideParentComponent/>
+
                 </details>
 
                 <details>

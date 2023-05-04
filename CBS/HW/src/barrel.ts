@@ -15,6 +15,8 @@ import ReduxCounter from "./components/ReduxCounter/ReduxCounter.component";
 import ListComponent from "./components/lesson3/List/List.component";
 import TwoListAndButtonComponent from "./components/lesson3/TwoListAndButton/TwoListAndButton.component";
 import BtnDivClickComponent from "./components/lesson3/BtnDivClick/BtnDivClick.component";
+import ShowHideComponent from "./components/lesson4/ShowHideParent/ShowHide/ShowHide.component";
+import ShowHideParentComponent from "./components/lesson4/ShowHideParent/ShowHideParent.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -37,5 +39,7 @@ export {
     ReduxCounter,
     ListComponent,
     TwoListAndButtonComponent,
-    BtnDivClickComponent
+    BtnDivClickComponent,
+    ShowHideComponent,
+    ShowHideParentComponent
 }
