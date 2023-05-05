@@ -1,7 +1,7 @@
 import initialStore from "../../redux/initialStore";
-import {CounterActions, myCounter} from "./counterActions";
+import {CounterActions, ICounterAction} from "./counterActions";
 
-export const  counterReducer = (count: number = initialStore.count, action: myCounter) => {
+export const  counterReducer = (count: number = initialStore.count, action: ICounterAction) => {
     switch (action.type) {
         case CounterActions.INC: {
             return ++count;

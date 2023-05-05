@@ -18,6 +18,7 @@ import BtnDivClickComponent from "./components/lesson3/BtnDivClick/BtnDivClick.c
 import ShowHideComponent from "./components/lesson4/ShowHideParent/ShowHide/ShowHide.component";
 import ShowHideParentComponent from "./components/lesson4/ShowHideParent/ShowHideParent.component";
 import DidUpdateCounterComponent from "./components/lesson4/DidUpdateCounter/DidUpdateCounter.component";
+import ReduxRandomCounterComponent from "./components/lesson5/ReduxRandomCounter/ReduxRandomCounter.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -43,5 +44,6 @@ export {
     BtnDivClickComponent,
     ShowHideComponent,
     ShowHideParentComponent,
-    DidUpdateCounterComponent
+    DidUpdateCounterComponent,
+    ReduxRandomCounterComponent,
 }

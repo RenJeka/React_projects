@@ -1,0 +1,34 @@
+
+.counterContainer {
+  margin: 0 auto;
+  max-width: 500px;
+  color: #e3ff64;
+
+  .counterName {
+    font-size: 1em;
+    color: #e3ff64;
+  }
+
+  .counterCountNumber {
+    font-size: 3em;
+    color: #e3ff64;
+  }
+}
+
+.border {
+  border: 2px dotted #c6fc6e;
+}
+
+.counterControls {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  margin: 0 auto;
+
+  button {
+    width: auto;
+    margin: 20px auto;
+  }
+
+
+}

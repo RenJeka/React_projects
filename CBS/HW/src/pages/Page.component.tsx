@@ -14,7 +14,7 @@ import {
     BtnDivClickComponent,
     ShowHideComponent,
     ShowHideParentComponent,
-    DidUpdateCounterComponent, TodosComponent
+    DidUpdateCounterComponent, TodosComponent, ReduxRandomCounterComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -97,6 +97,7 @@ class PageComponent extends Component<Props, State> {
 
                     <TitleComponent title={"Default"}/>
                     <ReduxCounter/>
+                    <ReduxRandomCounterComponent/>
 
                 </details>
             </div>

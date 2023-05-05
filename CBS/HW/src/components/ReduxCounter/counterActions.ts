@@ -2,7 +2,7 @@ export enum CounterActions {
     INC = "INC",
 }
 
-export interface myCounter {
+export interface ICounterAction {
     type: CounterActions;
     payload: any
 }
