@@ -8,23 +8,39 @@
 }
 
 .user {
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 3px;
+  overflow: auto;
+  padding-left: 10px;
   margin: 5px;
   border: 1px dotted rgba(254, 195, 195, 0.83);
+
+  h5 {
+    margin-bottom: 10px;
+  }
 }
 
 .todo {
-  @extend .wrapper;
+  display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   font-size: 16px;
-  width: 280px;
   max-height: 120px;
-  overflow: auto;
-  border: 1px dotted rgba(195, 201, 254, 0.83);
+
+  input {
+    margin: 3px 0 0 0;
+  }
+
+  li {
+    margin: 0 0 0 7px;
+    text-align: start;
+    list-style-type: none;
+    white-space: nowrap;
+  }
 }
 
 .listWrapper {

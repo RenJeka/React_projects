@@ -30,7 +30,6 @@ class TodosComponent extends Component<Props, State> {
         todos: [] as Todo[]
     }
 
-
     componentDidMount(): void {
         axios(TODOS_URL)
             .then(res => {
@@ -45,52 +44,30 @@ class TodosComponent extends Component<Props, State> {
             )
     }
 
-    getTodosLayout() {
-        // return posts.map(post => <li key={post.id}>{post.title}</li>);
-        return this.state.todos.map((todo: Todo) => {
-            return <div key={'todo_' + todo.id} className={classes.todo}>
-                <input key={'completed_' + todo.id} type="checkbox" defaultChecked={todo.completed}/>
-                <span key={'userId_' + todo.id}>{todo.userId}</span>
-                <li key={'taskName_' + todo.id}>{todo.title}</li>
-                {/*<ul className={classes.listWrapper}>*/}
-
-                {/*</ul>*/}
-            </div>
-        })
-    }
-
     getTodosForUserLayout(userTodos: Todo[]) {
-        // return posts.map(post => <li key={post.id}>{post.title}</li>);
         return userTodos.map((todo: Todo) => {
-            return <li key={'taskName_' + todo.id}>{todo.title}</li>
-
-            // return <div key={'todo_' + todo.id} className={classes.todo}>
-            //             <input key={'completed_' + todo.id} type="checkbox" defaultChecked={todo.completed}/>
-            //             <span key={'taskName_' + todo.id}>{todo.title}</span>
-            //         </div>
+            return <div key={'todo_' + todo.id} className={classes.todo}>
+                        <input key={'completed_' + todo.id} type="checkbox" defaultChecked={todo.completed}/>
+                        <li key={'taskName_' + todo.id}>{todo.title}</li>
+                    </div>
         })
     }
 
     getUsersLayout() {
-        // return posts.map(post => <li key={post.id}>{post.title}</li>);
         const usersLayout: any[] = [];
         for (const usersLayoutKey in this.state.users) {
-            usersLayout.push(<div key={'user_' + usersLayoutKey} className={classes.user}>
-                            <ul key={'userTodos_' + usersLayoutKey}>
-                                {this.getTodosForUserLayout(this.state.users[usersLayoutKey])}
+            usersLayout.push(<ul key={'userTodos_' + usersLayoutKey} className={classes.user}>
+                                    <h5 key={'userHeader_' + usersLayoutKey}>User {usersLayoutKey} :</h5>
+                                    {this.getTodosForUserLayout(this.state.users[usersLayoutKey])}
                             </ul>
-                        </div>)
+                            )
         }
-
         return usersLayout;
     }
 
     private groupTodosByUsers(array: Todo[]): Users {
         return array.reduce((result: Users, currentValue) => {
             (result[currentValue["userId"]] = result[currentValue["userId"]] || []).push(currentValue);
-            // (result[currentValue["userId"]] = result[currentValue[key]] || []).push(
-            //     currentValue
-            // );
             return result;
         }, {});
     }
@@ -99,7 +76,6 @@ class TodosComponent extends Component<Props, State> {
         return (
             <div className={classes.wrapper}>
                 {this.getUsersLayout()}
-                {/*{this.setPosts(this.state.posts)}*/}
             </div>
         );
     }
