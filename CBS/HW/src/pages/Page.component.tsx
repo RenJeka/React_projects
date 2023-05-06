@@ -99,8 +99,8 @@ class PageComponent extends Component<Props, State> {
                         Lesson #5
                     </summary>
 
-                    <TitleComponent title={"Default"}/>
-                    <ReduxCounter/>
+                    {/*<TitleComponent title={"Default"}/>*/}
+                    {/*<ReduxCounter/>*/}
                     <ReduxRandomCounterComponent/>
                     <JsonFormComponent/>
                     <NumberConverterParentComponent/>
