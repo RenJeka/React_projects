@@ -1,58 +1,46 @@
 import React, {ChangeEvent, Component, FormEvent} from 'react';
 import classes from "./JsonForm.component.module.scss"
 
-
 interface Props {
 }
 
 interface State {
-    loginInput: string;
-    passwordInput: string;
-    emailInput: string;
+    login: string;
+    password: string;
+    email: string;
     resultJson: string;
 }
 
 class JsonFormComponent extends Component<Props, State> {
     state: State = {
-        loginInput: '',
-        passwordInput: '',
-        emailInput: '',
+        login: '',
+        password: '',
+        email: '',
         resultJson: ''
     }
-
-
-    loginInputHandler(event: ChangeEvent<HTMLInputElement>) {
-        this.setState((state: State) => ({loginInput: event.target.value}))
-    }
-
-    passwordInputHandler(event: ChangeEvent<HTMLInputElement>) {
-        this.setState((state: State) => ({passwordInput: event.target.value}))
-    }
-
-    emailInputHandler(event: ChangeEvent<HTMLInputElement>) {
-        this.setState((state: State) => ({emailInput: event.target.value}))
+    inputHandler(event: ChangeEvent<HTMLInputElement>) {
+            const name: string = event.target.name;
+            const value: string = event.target.value;
+        this.setState((state: State) => {
+            return {
+                [name]: value
+            } as Pick<State, keyof State>;
+        });
     }
 
     submitHandler(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
 
-        console.log('Form event:', event);
-
-
         this.setState((state: State) => {
-
             const resultJson = {
-                login: state.loginInput,
-                password: state.passwordInput,
-                email: state.emailInput,
-
+                login: state.login,
+                password: state.password,
+                email: state.email,
             }
             return {
                 resultJson: JSON.stringify(resultJson)
-
             }
         })
-
     }
 
     render() {
@@ -66,8 +54,8 @@ class JsonFormComponent extends Component<Props, State> {
                         <input
                             name="login"
                             type="text"
-                            value={this.state.loginInput}
-                            onChange={(e) => {this.loginInputHandler(e)}}
+                            value={this.state.login}
+                            onChange={(e) => {this.inputHandler(e)}}
                         />
                     </label>
 
@@ -76,8 +64,8 @@ class JsonFormComponent extends Component<Props, State> {
                         <input
                             name="password"
                             type="password"
-                            value={this.state.passwordInput}
-                            onChange={(e) => {this.passwordInputHandler(e)}}
+                            value={this.state.password}
+                            onChange={(e) => {this.inputHandler(e)}}
                         />
                     </label>
                     <label>
@@ -85,8 +73,8 @@ class JsonFormComponent extends Component<Props, State> {
                         <input
                             name="email"
                             type="email"
-                            value={this.state.emailInput}
-                            onChange={(e) => {this.emailInputHandler(e)}}
+                            value={this.state.email}
+                            onChange={(e) => {this.inputHandler(e)}}
                         />
                     </label>
                     <input type="submit" value={'Get Form Data in JSON'}/>
