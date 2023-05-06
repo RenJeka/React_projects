@@ -14,7 +14,7 @@ import {
     BtnDivClickComponent,
     ShowHideComponent,
     ShowHideParentComponent,
-    DidUpdateCounterComponent, TodosComponent, ReduxRandomCounterComponent
+    DidUpdateCounterComponent, TodosComponent, ReduxRandomCounterComponent, JsonFormComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -98,8 +98,9 @@ class PageComponent extends Component<Props, State> {
                     <TitleComponent title={"Default"}/>
                     <ReduxCounter/>
                     <ReduxRandomCounterComponent/>
-
+                    <JsonFormComponent/>
                 </details>
+
             </div>
         );
     }

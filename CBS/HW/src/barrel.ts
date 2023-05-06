@@ -19,6 +19,7 @@ import ShowHideComponent from "./components/lesson4/ShowHideParent/ShowHide/Show
 import ShowHideParentComponent from "./components/lesson4/ShowHideParent/ShowHideParent.component";
 import DidUpdateCounterComponent from "./components/lesson4/DidUpdateCounter/DidUpdateCounter.component";
 import ReduxRandomCounterComponent from "./components/lesson5/ReduxRandomCounter/ReduxRandomCounter.component";
+import JsonFormComponent from "./components/lesson5/JsonForm/JsonForm.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -46,4 +47,5 @@ export {
     ShowHideParentComponent,
     DidUpdateCounterComponent,
     ReduxRandomCounterComponent,
+    JsonFormComponent
 }
