@@ -14,7 +14,11 @@ import {
     BtnDivClickComponent,
     ShowHideComponent,
     ShowHideParentComponent,
-    DidUpdateCounterComponent, TodosComponent, ReduxRandomCounterComponent, JsonFormComponent
+    DidUpdateCounterComponent,
+    TodosComponent,
+    ReduxRandomCounterComponent,
+    JsonFormComponent,
+    NumberConverterParentComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -99,6 +103,7 @@ class PageComponent extends Component<Props, State> {
                     <ReduxCounter/>
                     <ReduxRandomCounterComponent/>
                     <JsonFormComponent/>
+                    <NumberConverterParentComponent/>
                 </details>
 
             </div>

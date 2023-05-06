@@ -20,6 +20,7 @@ import ShowHideParentComponent from "./components/lesson4/ShowHideParent/ShowHid
 import DidUpdateCounterComponent from "./components/lesson4/DidUpdateCounter/DidUpdateCounter.component";
 import ReduxRandomCounterComponent from "./components/lesson5/ReduxRandomCounter/ReduxRandomCounter.component";
 import JsonFormComponent from "./components/lesson5/JsonForm/JsonForm.component";
+import NumberConverterParentComponent from "./components/lesson5/NumberConverterParent/NumberConverterParent.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -47,5 +48,6 @@ export {
     ShowHideParentComponent,
     DidUpdateCounterComponent,
     ReduxRandomCounterComponent,
-    JsonFormComponent
+    JsonFormComponent,
+    NumberConverterParentComponent
 }
