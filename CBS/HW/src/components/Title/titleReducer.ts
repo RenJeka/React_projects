@@ -7,8 +7,7 @@ export const  titleReducer = (title: string = initialStore.title, action: myActi
         case TitleActions.CHANGE_TITLE: {
             return action.payload;
         }
-
-
+        
         default: {
             return title;
         }

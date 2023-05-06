@@ -18,7 +18,7 @@ import {
     TodosComponent,
     ReduxRandomCounterComponent,
     JsonFormComponent,
-    NumberConverterParentComponent, JsonFormValidationComponent
+    NumberConverterParentComponent, JsonFormValidationComponent, ListReduxComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -105,14 +105,21 @@ class PageComponent extends Component<Props, State> {
                     <JsonFormComponent/>
                     <NumberConverterParentComponent/>
                 </details>
-
-
+                
                 <details>
                     <summary>
                         Lesson #6
                     </summary>
 
                     <JsonFormValidationComponent/>
+                </details>
+
+                <details>
+                    <summary>
+                        Lesson #7
+                    </summary>
+
+                    <ListReduxComponent/>
                 </details>
 
             </div>

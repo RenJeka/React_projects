@@ -22,6 +22,7 @@ import ReduxRandomCounterComponent from "./components/lesson5/ReduxRandomCounter
 import JsonFormComponent from "./components/lesson5/JsonForm/JsonForm.component";
 import NumberConverterParentComponent from "./components/lesson5/NumberConverterParent/NumberConverterParent.component";
 import JsonFormValidationComponent from "./components/lesson7/JsonFormValidation/JsonFormValidation.component";
+import ListReduxComponent from "./components/lesson7/ListRedux/ListRedux.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -51,5 +52,6 @@ export {
     ReduxRandomCounterComponent,
     JsonFormComponent,
     NumberConverterParentComponent,
-    JsonFormValidationComponent
+    JsonFormValidationComponent,
+    ListReduxComponent
 }

@@ -1,0 +1,27 @@
+.container {
+
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto 0;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    width: auto;
+    margin-top: 10px;
+    padding: 10px;
+  }
+}
+
+.listWrapper {
+  width: 150px;
+  height: 300px;
+  margin: 20px auto 0;
+  overflow: auto;
+
+  border: 2px dotted;
+
+  li {
+    list-style: circle;
+  }
+}
