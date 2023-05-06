@@ -6,14 +6,16 @@ export interface StorePosts {
 export interface MyStore {
     title: string,
     count: number,
+    list: string[],
     randomCounter: number,
-    posts: StorePosts
+    posts: StorePosts,
 }
 
 const initialStore: MyStore = {
     title: "Redux",
     count: 0,
     randomCounter: 0,
+    list: [],
     posts: {
         loading: false,
         posts: []

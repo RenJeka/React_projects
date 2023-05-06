@@ -20,7 +20,8 @@ import {
     ReduxRandomCounterComponent,
     JsonFormComponent,
     NumberConverterParentComponent,
-    JsonFormValidationComponent
+    JsonFormValidationComponent,
+    ListReduxComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -93,7 +94,6 @@ class PageComponent extends Component<Props, State> {
                     <ShowHideParentComponent/>
                     <DidUpdateCounterComponent/>
                     <TodosComponent/>
-
                 </details>
 
                 <details>
@@ -108,7 +108,6 @@ class PageComponent extends Component<Props, State> {
                     <NumberConverterParentComponent/>
                     {/*<TitleComponent title={"Default"}/>*/}
                     <ReduxCounter/>
-
                 </details>
 
                 <details>
@@ -117,16 +116,17 @@ class PageComponent extends Component<Props, State> {
                     </summary>
 
                     <PostsComponent/>
-
+                    <JsonFormValidationComponent/>
                 </details>
 
                 <details>
                     <summary>
-                        Lesson #6
+                        Lesson #7
                     </summary>
 
-                    <JsonFormValidationComponent/>
+                    <ListReduxComponent/>
                 </details>
+
             </div>
         );
     }
