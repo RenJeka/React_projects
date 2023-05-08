@@ -58,11 +58,10 @@ export {
     JsonFormValidationComponent,
     PostsComponent,
     ListReduxComponent,
-    AsyncTodosComponent
+    AsyncTodosComponent,
 };
 
 export type {
     Todo,
     Users
 };
-
