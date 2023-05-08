@@ -7,10 +7,10 @@ import postActionCreator from "./posts.async.actions";
 import {Dispatch} from "redux";
 
 interface Post {
-    id:number,
+    id: number,
     userId: number,
     title: string,
-    body:string
+    body: string
 }
 
 interface Props {
@@ -29,16 +29,15 @@ class PostsComponent extends Component<Props> {
     // }
 
     render() {
-
         const {posts, loading} = this.props.posts;
-
-        console.log('posts', posts);
-        console.log('props', this.props);
-
 
         return (
             <ul className={classes.listWrapper}>
-                {posts.map(post => <li key={post.id}>{post.title}</li>)}
+                {
+                    loading
+                        ? <span>Loading...</span>
+                        : posts.map(post => <li key={post.id}>{post.title}</li>)
+                }
                 {/*{this.setPosts(this.state.posts)}*/}
             </ul>
         );

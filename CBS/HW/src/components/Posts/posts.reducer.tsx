@@ -13,7 +13,7 @@ export const  postsReducer = (postsFromStore = initialStore.posts, action: Posts
         case PostsAsyncActions.LOADING_END: {
             return {
                 ...postsFromStore,
-                loading: true,
+                loading: false,
                 posts: action.payload
             };
         }

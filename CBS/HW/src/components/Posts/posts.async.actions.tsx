@@ -16,17 +16,23 @@ export default function postActionCreator() {
     return (dispatch: Dispatch) => {
         dispatch({type: PostsAsyncActions.LOADING_START})
 
-        axios('https://jsonplaceholder.typicode.com/posts')
-            .then(res => {
-                dispatch({
-                    type: PostsAsyncActions.LOADING_END,
-                    payload: res.data
+        setTimeout(() => {
+            getPosts();
+        }, 3000)
+
+        function getPosts() {
+            axios('https://jsonplaceholder.typicode.com/posts')
+                .then(res => {
+                    dispatch({
+                        type: PostsAsyncActions.LOADING_END,
+                        payload: res.data
+                    })
                 })
-            })
-            .catch(error => {
-                dispatch({
-                    type: PostsAsyncActions.LOADING_ERROR
+                .catch(error => {
+                    dispatch({
+                        type: PostsAsyncActions.LOADING_ERROR
+                    })
                 })
-            })
+        }
     };
 }
