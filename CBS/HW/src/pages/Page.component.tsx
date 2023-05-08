@@ -4,6 +4,7 @@ import {
     Lesson1Component,
     ColorString,
     ColorStringParent,
+    PostsComponent,
     ClockComponent,
     PropsOutputComponent,
     WithChildrenComponent,
@@ -104,7 +105,21 @@ class PageComponent extends Component<Props, State> {
                     <ReduxRandomCounterComponent/>
                     <JsonFormComponent/>
                     <NumberConverterParentComponent/>
+                    <TitleComponent title={"Default"}/>
+                    <ReduxCounter/>
+
                 </details>
+
+                <details>
+                    <summary>
+                        Lesson #6
+                    </summary>
+
+                    <PostsComponent/>
+
+                </details>
+
+
 
             </div>
         );
