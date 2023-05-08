@@ -1,3 +1,5 @@
+import {IAsyncTodos} from "../components/lesson6/AsyncTodos/asyncTodos.actions";
+
 export interface StorePosts {
     loading: boolean,
     posts: any[]
@@ -9,6 +11,7 @@ export interface MyStore {
     list: string[],
     randomCounter: number,
     posts: StorePosts,
+    asyncTodos: IAsyncTodos
 }
 
 const initialStore: MyStore = {
@@ -19,6 +22,10 @@ const initialStore: MyStore = {
     posts: {
         loading: false,
         posts: []
+    },
+    asyncTodos: {
+        loading: false,
+        todos: []
     }
 }
 

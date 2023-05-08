@@ -1,7 +1,7 @@
-import initialStore from "../../redux/initialStore";
+import initialStore, {StorePosts} from "../../redux/initialStore";
 import {PostsAsyncAction, PostsAsyncActions} from "./posts.async.actions";
 
-export const  postsReducer = (postsFromStore = initialStore.posts, action: PostsAsyncAction) => {
+export const  postsReducer = (postsFromStore: StorePosts = initialStore.posts, action: PostsAsyncAction) => {
     switch (action.type) {
         case PostsAsyncActions.LOADING_START: {
             return {

@@ -1,5 +1,6 @@
 import axios from "axios";
 import {Dispatch} from "redux";
+import {StorePosts} from "../../redux/initialStore";
 
 export enum PostsAsyncActions {
     LOADING_START = 'LOADING_START',
@@ -9,7 +10,7 @@ export enum PostsAsyncActions {
 
 export interface PostsAsyncAction {
     type: PostsAsyncActions;
-    payload: any
+    payload: any[]
 }
 
 export default function postActionCreator() {

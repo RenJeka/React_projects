@@ -21,7 +21,8 @@ import {
     JsonFormComponent,
     NumberConverterParentComponent,
     JsonFormValidationComponent,
-    ListReduxComponent
+    ListReduxComponent,
+    AsyncTodosComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -117,6 +118,7 @@ class PageComponent extends Component<Props, State> {
 
                     <PostsComponent/>
                     <JsonFormValidationComponent/>
+                    <AsyncTodosComponent/>
                 </details>
 
                 <details>

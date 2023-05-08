@@ -21,9 +21,11 @@ import DidUpdateCounterComponent from "./components/lesson4/DidUpdateCounter/Did
 import ReduxRandomCounterComponent from "./components/lesson5/ReduxRandomCounter/ReduxRandomCounter.component";
 import JsonFormComponent from "./components/lesson5/JsonForm/JsonForm.component";
 import NumberConverterParentComponent from "./components/lesson5/NumberConverterParent/NumberConverterParent.component";
-import JsonFormValidationComponent from "./components/lesson7/JsonFormValidation/JsonFormValidation.component";
+import JsonFormValidationComponent from "./components/lesson6/JsonFormValidation/JsonFormValidation.component";
 import ListReduxComponent from "./components/lesson7/ListRedux/ListRedux.component";
 import PostsComponent from "./components/Posts/Posts.component";
+import AsyncTodosComponent from "./components/lesson6/AsyncTodos/AsyncTodos.component";
+import { Todo, Users } from "./common/interfaces/Todo";
 
 const images = {
     reactLogo: reactLogo,
@@ -56,4 +58,11 @@ export {
     JsonFormValidationComponent,
     PostsComponent,
     ListReduxComponent,
-}
+    AsyncTodosComponent
+};
+
+export type {
+    Todo,
+    Users
+};
+
