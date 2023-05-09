@@ -4,11 +4,18 @@ import classes from "./JsonFormValidation.component.module.scss"
 interface Props {
 }
 
+type inputs = "login" | "password" | "email";
+
 interface State {
     login: string;
     password: string;
     email: string;
     resultJson: string;
+    validation?: {
+        login:  boolean,
+        password: boolean,
+        email: boolean
+    }
 }
 
 class JsonFormValidationComponent extends Component<Props, State> {
@@ -16,31 +23,54 @@ class JsonFormValidationComponent extends Component<Props, State> {
         login: '',
         password: '',
         email: '',
-        resultJson: ''
+        resultJson: '',
+        validation: {
+            login: false,
+            password: false,
+            email: false
+        }
     }
     inputHandler(event: ChangeEvent<HTMLInputElement>) {
-            const name: string = event.target.name;
-            const value: string = event.target.value;
+        const name: keyof State = event.target.name as inputs;
+        const value: string = event.target.value;
         this.setState((state: State) => {
+            let validation = {...state.validation!};
+            validation[name] = this.validateInput(name, value)
             return {
-                [name]: value
-            } as Pick<State, keyof State>;
+                [name]: value,
+                validation:validation
+            } as unknown as Pick<State, keyof State>;
         });
     }
 
     submitHandler(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
 
-        this.setState((state: State) => {
-            const resultJson = {
-                login: state.login,
-                password: state.password,
-                email: state.email,
+        if (Object.values(this.state.validation!).some(value => !value)) {
+            console.log('Form is not valid:');
+            return
+        }
+
+        console.log('submit success:');
+    }
+
+    validateInput(inputName: string, inputValue: string): boolean {
+        switch (inputName) {
+            case "login": {
+                return !!inputValue;
             }
-            return {
-                resultJson: JSON.stringify(resultJson)
+
+            case "password": {
+                return !!inputValue;
             }
-        })
+            case "email": {
+                return !!inputValue &&  /^\S+@\S+\.\S+$/.test(inputValue);
+            }
+
+            default: {
+                return true;
+            }
+        }
     }
 
     render() {
@@ -55,16 +85,17 @@ class JsonFormValidationComponent extends Component<Props, State> {
                             name="login"
                             type="text"
                             value={this.state.login}
+                            aria-invalid={!this.state.validation?.login}
                             onChange={(e) => {this.inputHandler(e)}}
                         />
                     </label>
-
                     <label>
                         Password:
                         <input
                             name="password"
                             type="password"
                             value={this.state.password}
+                            aria-invalid={!this.state.validation?.password}
                             onChange={(e) => {this.inputHandler(e)}}
                         />
                     </label>
@@ -74,14 +105,11 @@ class JsonFormValidationComponent extends Component<Props, State> {
                             name="email"
                             type="email"
                             value={this.state.email}
+                            aria-invalid={!this.state.validation?.email}
                             onChange={(e) => {this.inputHandler(e)}}
                         />
                     </label>
                     <input type="submit" value={'Get Form Data in JSON'}/>
-                    {
-                        this.state.resultJson
-                        && <pre className={classes.jsonOutput}>{this.state.resultJson}</pre>
-                    }
                 </form>
         );
     }
