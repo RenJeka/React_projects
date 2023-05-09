@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {MyStore} from "../../redux/initialStore";
 import {connect} from "react-redux";
 import {incActionCreator} from "./counterActions";
 import classes from "./ReduxCounter.component.module.scss";
+import {MyStore} from "../../barrel";
 
 
 interface Props {

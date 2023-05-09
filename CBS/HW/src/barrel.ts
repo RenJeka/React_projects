@@ -25,7 +25,10 @@ import JsonFormValidationComponent from "./components/lesson6/JsonFormValidation
 import ListReduxComponent from "./components/lesson7/ListRedux/ListRedux.component";
 import PostsComponent from "./components/Posts/Posts.component";
 import AsyncTodosComponent from "./components/lesson6/AsyncTodos/AsyncTodos.component";
-import { Todo, Users } from "./common/interfaces/Todo";
+import { IAsyncTodos, Todo, Users } from "./common/interfaces/Todo";
+import { IAsyncPosts, Post } from "./common/interfaces/Posts";
+import { MyStore } from "./common/interfaces/Store";
+import initialStore from "./redux/initialStore";
 
 const images = {
     reactLogo: reactLogo,
@@ -33,6 +36,7 @@ const images = {
 }
 
 export {
+    initialStore,
     images,
     Color,
     Lesson1Component,
@@ -62,6 +66,10 @@ export {
 };
 
 export type {
+    MyStore,
     Todo,
-    Users
+    Users,
+    IAsyncTodos,
+    Post,
+    IAsyncPosts
 };

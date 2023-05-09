@@ -1,18 +1,4 @@
-import {IAsyncTodos} from "../components/lesson6/AsyncTodos/asyncTodos.actions";
-
-export interface StorePosts {
-    loading: boolean,
-    posts: any[]
-}
-
-export interface MyStore {
-    title: string,
-    count: number,
-    list: string[],
-    randomCounter: number,
-    posts: StorePosts,
-    asyncTodos: IAsyncTodos
-}
+import {MyStore} from "../barrel";
 
 const initialStore: MyStore = {
     title: "Redux",
@@ -25,6 +11,7 @@ const initialStore: MyStore = {
     },
     asyncTodos: {
         loading: false,
+        operationLoading: false,
         todos: []
     }
 }

@@ -1,7 +1,8 @@
-import initialStore, {StorePosts} from "../../redux/initialStore";
 import {PostsAsyncAction, PostsAsyncActions} from "./posts.async.actions";
+import {IAsyncPosts, initialStore} from "../../barrel";
 
-export const  postsReducer = (postsFromStore: StorePosts = initialStore.posts, action: PostsAsyncAction) => {
+export const  postsReducer = (postsFromStore: IAsyncPosts = initialStore.posts, action: PostsAsyncAction) => {
+
     switch (action.type) {
         case PostsAsyncActions.LOADING_START: {
             return {
@@ -14,7 +15,7 @@ export const  postsReducer = (postsFromStore: StorePosts = initialStore.posts, a
             return {
                 ...postsFromStore,
                 loading: false,
-                posts: action.payload
+                posts: action.payload || []
             };
         }
 

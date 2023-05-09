@@ -1,7 +1,7 @@
 import {applyMiddleware, compose, createStore, Store} from "redux";
-import initialStore from "./initialStore";
 import {reducer} from "./rootReducer";
 import thunk from "redux-thunk";
+import {initialStore} from "../barrel";
 
 const store: Store = createStore(
     reducer,

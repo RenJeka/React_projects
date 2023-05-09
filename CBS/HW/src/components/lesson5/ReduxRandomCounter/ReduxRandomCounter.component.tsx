@@ -6,8 +6,8 @@ import {
     incRandomCounterActionCreator, randomIncRandomCounterActionCreator,
     resetRandomCounterActionCreator
 } from "./randomCounterActions";
-import {MyStore} from "../../../redux/initialStore";
 import {connect} from "react-redux";
+import {MyStore} from "../../../barrel";
 
 
 interface Props {

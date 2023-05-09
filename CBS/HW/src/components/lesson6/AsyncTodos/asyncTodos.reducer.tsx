@@ -1,10 +1,7 @@
-import {asyncTodosActions, IAsyncTodos, IAsyncTodosActions} from "./asyncTodos.actions";
-import initialStore from "../../../redux/initialStore";
-
+import {asyncTodosActions, IAsyncTodosActions} from "./asyncTodos.actions";
+import {IAsyncTodos, initialStore, Todo} from "../../../barrel";
 
 export const asyncTodosReducer = (todosFromStore: IAsyncTodos = initialStore.asyncTodos, action: IAsyncTodosActions) => {
-
-
 
     switch (action.type) {
         case asyncTodosActions.LOADING_START: {
@@ -18,7 +15,7 @@ export const asyncTodosReducer = (todosFromStore: IAsyncTodos = initialStore.asy
             return {
                 ...todosFromStore,
                 loading: false,
-                todos: action.payload || []
+                todos: Array.isArray(action.payload) ? action.payload : []
             };
         }
 
@@ -26,6 +23,28 @@ export const asyncTodosReducer = (todosFromStore: IAsyncTodos = initialStore.asy
             return {
                 ...todosFromStore,
                 loading: false
+            }
+        }
+
+        case asyncTodosActions.OPERATION_LOADING_START: {
+            return {
+                ...todosFromStore,
+                operationLoading: true
+            };
+        }
+
+        case asyncTodosActions.OPERATION_LOADING_END: {
+            return {
+                ...todosFromStore,
+                operationLoading: false,
+                todos: [...todosFromStore.todos, action.payload as Todo]
+            }
+        }
+
+        case asyncTodosActions.OPERATION_LOADING_ERROR: {
+            return {
+                ...todosFromStore,
+                operationLoading: false,
             }
         }
         default: {

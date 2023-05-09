@@ -1,20 +1,12 @@
 import React, {Component} from 'react';
-import axios from "axios";
 import classes from "./Posts.component.module.scss"
 import {connect} from "react-redux";
-import {MyStore, StorePosts} from "../../redux/initialStore";
 import postActionCreator from "./posts.async.actions";
 import {Dispatch} from "redux";
-
-interface Post {
-    id: number,
-    userId: number,
-    title: string,
-    body: string
-}
+import {IAsyncPosts, MyStore} from "../../barrel";
 
 interface Props {
-    posts: StorePosts;
+    posts: IAsyncPosts;
     dispatch: any;
 }
 
