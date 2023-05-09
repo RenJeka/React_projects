@@ -1,5 +1,5 @@
 export type Users = {
-    [key: string]: Todo[];
+    [userId: string]: Todo[];
 };
 
 export interface Todo {
