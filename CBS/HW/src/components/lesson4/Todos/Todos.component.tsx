@@ -64,7 +64,7 @@ class TodosComponent extends Component<Props, State> {
 
     render() {
         return (
-            <div className={classes.wrapper}>
+            <div className={[classes.wrapper, "grid"].join(" ")}>
                 {this.getUsersLayout()}
             </div>
         );

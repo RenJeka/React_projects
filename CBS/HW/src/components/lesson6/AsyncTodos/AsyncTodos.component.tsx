@@ -2,42 +2,36 @@ import React, {Component} from 'react';
 import classes from "./AsyncTodos.component.module.scss"
 import axios from "axios";
 import {Todo, Users} from "../../../barrel";
-
-
-
+import {MyStore} from "../../../redux/initialStore";
+import {IAsyncTodos} from "./asyncTodos.actions";
+import {connect} from "react-redux";
 
 interface Props {
-}
-
-interface State {
-    users: Users
-    todos: Todo[]
+    todos: IAsyncTodos,
+    dispatch: any
 }
 
 const TODOS_URL = 'https://jsonplaceholder.typicode.com/todos';
 
-class AsyncTodosComponent extends Component<Props, State> {
+class AsyncTodosComponent extends Component<Props> {
 
-    state: State = {
-        users: {} as Users,
-        todos: [] as Todo[]
+    render() {
+        const users = AsyncTodosComponent.groupTodosByUsers(this.props.todos.todos)
+        return (
+            <article aria-busy={this.props.todos.loading} className={classes.wrapper}>
+                {this.getUsersLayout(users)}
+            </article>
+        );
     }
 
-    componentDidMount(): void {
-        axios(TODOS_URL)
-            .then(res => {
-                    console.log('Users:', this.groupTodosByUsers(res.data),);
-
-                    this.setState(
-                        {
-                            users: this.groupTodosByUsers(res.data),
-                            todos: res.data
-                        })
-                }
-            )
+    static groupTodosByUsers(array: Todo[]): Users {
+        return array.reduce((result: Users, currentValue) => {
+            (result[currentValue["userId"]] = result[currentValue["userId"]] || []).push(currentValue);
+            return result;
+        }, {});
     }
 
-    getTodosForUserLayout(userTodos: Todo[]) {
+    private getTodosForUserLayout(userTodos: Todo[]) {
         return userTodos.map((todo: Todo) => {
             return <div key={'todo_' + todo.id} className={classes.todo}>
                 <input key={'completed_' + todo.id} type="checkbox" defaultChecked={todo.completed}/>
@@ -46,41 +40,24 @@ class AsyncTodosComponent extends Component<Props, State> {
         })
     }
 
-    getUsersLayout() {
+    private getUsersLayout(users: Users) {
         const usersLayout: any[] = [];
-        for (const usersLayoutKey in this.state.users) {
-            usersLayout.push(<ul key={'userTodos_' + usersLayoutKey} className={classes.user}>
-                    <h5 key={'userHeader_' + usersLayoutKey}>User {usersLayoutKey} :</h5>
-                    {this.getTodosForUserLayout(this.state.users[usersLayoutKey])}
-                </ul>
+        for (const usersLayoutKey in users) {
+            usersLayout.push(<article key={'userTodos_' + usersLayoutKey} className={classes.user}>
+                    <header key={'userHeader_' + usersLayoutKey}>User {usersLayoutKey} :</header>
+                    <body>{this.getTodosForUserLayout(users[usersLayoutKey])}</body>
+                    <footer><a href="#" role="button">Add Todo:</a></footer>
+                </article>
             )
         }
         return usersLayout;
     }
+}
 
-    private groupTodosByUsers(array: Todo[]): Users {
-        return array.reduce((result: Users, currentValue) => {
-            (result[currentValue["userId"]] = result[currentValue["userId"]] || []).push(currentValue);
-            return result;
-        }, {});
-    }
-
-    render() {
-        // return (
-        //     <div className={classes.wrapper}>
-        //         <h5>Async Todos</h5>
-        //         <ul>
-        //             Loading...
-        //         </ul>
-        //     </div>
-        // );
-
-        return (
-            <div className={classes.wrapper}>
-                {this.getUsersLayout()}
-            </div>
-        );
+const mapStateToProps = (store: MyStore) => {
+    return {
+        todos: store.asyncTodos
     }
 }
 
-export default AsyncTodosComponent;
+export default connect(mapStateToProps)(AsyncTodosComponent);
