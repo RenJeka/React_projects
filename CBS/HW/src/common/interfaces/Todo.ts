@@ -8,3 +8,9 @@ export interface Todo {
     title: string,
     completed: boolean
 }
+
+export interface IAsyncTodos {
+    loading: boolean,
+    operationLoading: boolean,
+    todos: Todo[]
+}

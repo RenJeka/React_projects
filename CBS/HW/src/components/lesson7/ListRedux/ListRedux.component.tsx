@@ -1,9 +1,9 @@
 import React, {ChangeEvent, Component, FormEvent} from 'react';
 import classes from "./ListRedux.component.module.scss";
 import {connect} from "react-redux";
-import {MyStore} from "../../../redux/initialStore";
 import {Dispatch} from "redux";
 import {addItemActionCreator} from "./listAction";
+import {MyStore} from "../../../barrel";
 
 interface Props {
     listItems?: string[];

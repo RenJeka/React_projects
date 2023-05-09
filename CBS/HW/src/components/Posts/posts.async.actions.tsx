@@ -1,16 +1,16 @@
 import axios from "axios";
 import {Dispatch} from "redux";
-import {StorePosts} from "../../redux/initialStore";
+import {Post} from "../../barrel";
 
 export enum PostsAsyncActions {
-    LOADING_START = 'LOADING_START',
-    LOADING_END = 'LOADING_END',
-    LOADING_ERROR = 'LOADING_ERROR',
+    LOADING_START = 'POSTS_LOADING_START',
+    LOADING_END = 'POSTS_LOADING_END',
+    LOADING_ERROR = 'POSTS_LOADING_ERROR',
 }
 
 export interface PostsAsyncAction {
     type: PostsAsyncActions;
-    payload: any[]
+    payload?: Post[]
 }
 
 export default function postActionCreator() {

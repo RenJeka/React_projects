@@ -1,5 +1,5 @@
-import initialStore from "../../../redux/initialStore";
 import {IListAction, ListActions} from "./listAction";
+import {initialStore} from "../../../barrel";
 
 export const  listReducer = (list: string[] = initialStore.list, action: IListAction) => {
     switch (action.type) {

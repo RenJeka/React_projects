@@ -1,5 +1,5 @@
-import initialStore from "../../../redux/initialStore";
 import {IRandomCounterAction, RandomCounterActions} from "./randomCounterActions";
+import {initialStore} from "../../../barrel";
 
 export const randomCounterReducer = (
     counter: number = initialStore.randomCounter,

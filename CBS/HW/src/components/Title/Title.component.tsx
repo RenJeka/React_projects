@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {Store} from "redux";
-import {MyStore} from "../../redux/initialStore";
 import {changeTitle, TitleActions} from "./action";
+import {MyStore} from "../../barrel";
 interface Props {
     title: string,
     titleFromStore: string,

@@ -1,5 +1,5 @@
-import initialStore from "../../redux/initialStore";
 import {CounterActions, ICounterAction} from "./counterActions";
+import {initialStore} from "../../barrel";
 
 export const  counterReducer = (count: number = initialStore.count, action: ICounterAction) => {
     switch (action.type) {

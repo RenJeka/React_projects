@@ -1,6 +1,5 @@
-import {Action} from "redux";
 import {myAction, TitleActions} from "./action";
-import initialStore from "../../redux/initialStore";
+import {initialStore} from "../../barrel";
 
 export const  titleReducer = (title: string = initialStore.title, action: myAction) => {
     switch (action.type) {
