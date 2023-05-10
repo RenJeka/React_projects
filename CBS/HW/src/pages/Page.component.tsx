@@ -23,6 +23,7 @@ import {
     JsonFormValidationComponent,
     ListReduxComponent,
     AsyncTodosComponent,
+    TodoListComponent,
     FunctionPostComponent,
     FuncCounter,
     FucReduxCounterComponent
@@ -130,6 +131,7 @@ class PageComponent extends Component<Props, State> {
                     </summary>
 
                     <ListReduxComponent/>
+                    <TodoListComponent/>
                 </details>
 
                 <details>

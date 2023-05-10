@@ -1,0 +1,31 @@
+
+.todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 16px;
+  max-height: 120px;
+
+  input {
+    margin: 3px 0 0 0;
+    flex-shrink: 0;
+  }
+
+  li {
+    margin: 0 0 0 7px;
+    text-align: start;
+    list-style-type: none;
+    white-space: nowrap;
+  }
+}
+
+.form {
+  margin: 0;
+  text-align: left;
+}
+
+.listWrapper {
+  width: 500px;
+  text-align: left;
+}

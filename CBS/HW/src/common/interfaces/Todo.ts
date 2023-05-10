@@ -14,3 +14,15 @@ export interface IAsyncTodos {
     operationLoading: boolean,
     todos: Todo[]
 }
+
+export interface TodoListItem {
+    id: number,
+    title: string,
+    completed: boolean
+}
+
+export interface ITodoList {
+    loading: boolean,
+    operationLoading: boolean,
+    todos: TodoListItem[]
+}

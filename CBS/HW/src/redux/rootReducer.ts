@@ -5,6 +5,7 @@ import {randomCounterReducer} from "../components/lesson5/ReduxRandomCounter/ran
 import {postsReducer} from "../components/Posts/posts.reducer";
 import {listReducer} from "../components/lesson7/ListRedux/listReducer";
 import {asyncTodosReducer} from "../components/lesson6/AsyncTodos/asyncTodos.reducer";
+import { todoListReducer } from "../components/lesson7/TodoList/TodoList.reducer";
 
 export const reducer = combineReducers(
     {
@@ -14,5 +15,6 @@ export const reducer = combineReducers(
         list: listReducer,
         posts: postsReducer,
         asyncTodos: asyncTodosReducer,
+        todoList: todoListReducer
     }
 );

@@ -13,6 +13,11 @@ const initialStore: MyStore = {
         loading: false,
         operationLoading: false,
         todos: []
+    },
+    todoList: {
+        loading: false,
+        operationLoading: false,
+        todos: []
     }
 }
 

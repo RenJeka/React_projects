@@ -25,10 +25,11 @@ import JsonFormValidationComponent from "./components/lesson6/JsonFormValidation
 import ListReduxComponent from "./components/lesson7/ListRedux/ListRedux.component";
 import PostsComponent from "./components/Posts/Posts.component";
 import AsyncTodosComponent from "./components/lesson6/AsyncTodos/AsyncTodos.component";
-import { IAsyncTodos, Todo, Users } from "./common/interfaces/Todo";
+import { IAsyncTodos, ITodoList, Todo, TodoListItem, Users } from "./common/interfaces/Todo";
 import { IAsyncPosts, Post } from "./common/interfaces/Posts";
 import { MyStore } from "./common/interfaces/Store";
 import initialStore from "./redux/initialStore";
+import TodoListComponent from "./components/lesson7/TodoList/TodoList.component";
 import FunctionPostComponent from "./components/lesson8/FunctionPost/FunctionPost.component";
 import FuncCounter from "./components/lesson8/FuncCounter/FuncCounter";
 import FucReduxCounterComponent from "./components/lesson8/ReduxCounter/FucReduxCounter.component";
@@ -66,6 +67,7 @@ export {
     JsonFormValidationComponent,
     ListReduxComponent,
     AsyncTodosComponent,
+    TodoListComponent,
     FunctionPostComponent,
     FuncCounter,
     FucReduxCounterComponent,
@@ -77,5 +79,7 @@ export type {
     Users,
     IAsyncTodos,
     Post,
-    IAsyncPosts
+    IAsyncPosts,
+    TodoListItem,
+    ITodoList
 };
