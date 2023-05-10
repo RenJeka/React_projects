@@ -1,0 +1,20 @@
+
+.counterContainer {
+  color: #e3ff64;
+  
+  p {
+    color: #e3ff64;
+  }
+}
+
+.counterControls {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  margin: 0 auto;
+
+  button {
+    width: auto;
+    margin: 20px auto;
+  }
+}

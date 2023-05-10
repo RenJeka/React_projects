@@ -7,6 +7,14 @@ export const  counterReducer = (count: number = initialStore.count, action: ICou
             return ++count;
         }
 
+        case CounterActions.DEC: {
+            return --count;
+        }
+
+        case CounterActions.RESET: {
+            return 0;
+        }
+
         default: {
             return count;
         }
