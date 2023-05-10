@@ -9,6 +9,9 @@ export enum TodoListActions {
     OPERATION_LOADING_START = 'TODO_LIST_OPERATION_LOADING_START',
     OPERATION_LOADING_END = 'TODO_LIST_OPERATION_LOADING_END',
     OPERATION_LOADING_ERROR = 'TODO_LIST_OPERATION_LOADING_ERROR',
+    OPERATION_ADD = 'TODO_LIST_OPERATION_ADD',
+    OPERATION_DELETE = 'TODO_LIST_OPERATION_DELETE',
+    OPERATION_TOGGLE_CHECK = 'TODO_LIST_OPERATION_TOGGLE_CHECK',
 }
 
 export interface ITodoListAction {
@@ -37,15 +40,42 @@ export function loadTodoListAction() {
     }
 }
 
-export function addTodoListAction(todoListItem: TodoListItem) {
+export function addTodoListAction(todoListItem: TodoListItem, form: HTMLFormElement) {
     return (dispatch: Dispatch<ITodoListAction>) => {
         dispatch({type: TodoListActions.OPERATION_LOADING_START})
 
         setTimeout(() => {
             dispatch({
-                type: TodoListActions.OPERATION_LOADING_END,
+                type: TodoListActions.OPERATION_ADD,
                 payload: todoListItem
             });
-        }, 1000)
+            form.reset();
+        }, 500)
+    }
+}
+
+export function deleteTodoListAction(todoListItem: TodoListItem) {
+    return (dispatch: Dispatch<ITodoListAction>) => {
+        dispatch({type: TodoListActions.OPERATION_LOADING_START})
+
+        setTimeout(() => {
+            dispatch({
+                type: TodoListActions.OPERATION_DELETE,
+                payload: todoListItem
+            });
+        }, 500)
+    }
+}
+
+export function toggleCheckTodoListAction(todoListItem: TodoListItem) {
+    return (dispatch: Dispatch<ITodoListAction>) => {
+        dispatch({type: TodoListActions.OPERATION_LOADING_START})
+
+        setTimeout(() => {
+            dispatch({
+                type: TodoListActions.OPERATION_TOGGLE_CHECK,
+                payload: todoListItem
+            });
+        }, 500)
     }
 }
