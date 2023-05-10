@@ -1,5 +1,7 @@
 export enum CounterActions {
-    INC = "INC",
+    INC = "COUNTER_INCREMENT",
+    DEC = "COUNTER_DECREMENT",
+    RESET = "COUNTER_RESET",
 }
 
 export interface ICounterAction {
@@ -7,9 +9,20 @@ export interface ICounterAction {
     payload: any
 }
 
-export const incActionCreator = (value?: any) => {
+export const incActionCreator = () => {
     return {
         type: CounterActions.INC,
-        payload: value
+    }
+}
+
+export const decActionCreator = () => {
+    return {
+        type: CounterActions.DEC,
+    }
+}
+
+export const resetActionCreator = () => {
+    return {
+        type: CounterActions.RESET,
     }
 }

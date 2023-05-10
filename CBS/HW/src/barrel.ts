@@ -29,6 +29,9 @@ import { IAsyncTodos, Todo, Users } from "./common/interfaces/Todo";
 import { IAsyncPosts, Post } from "./common/interfaces/Posts";
 import { MyStore } from "./common/interfaces/Store";
 import initialStore from "./redux/initialStore";
+import FunctionPostComponent from "./components/lesson8/FunctionPost/FunctionPost.component";
+import FuncCounter from "./components/lesson8/FuncCounter/FuncCounter";
+import FucReduxCounterComponent from "./components/lesson8/ReduxCounter/FucReduxCounter.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -59,10 +62,13 @@ export {
     ReduxRandomCounterComponent,
     JsonFormComponent,
     NumberConverterParentComponent,
-    JsonFormValidationComponent,
     PostsComponent,
+    JsonFormValidationComponent,
     ListReduxComponent,
     AsyncTodosComponent,
+    FunctionPostComponent,
+    FuncCounter,
+    FucReduxCounterComponent,
 };
 
 export type {

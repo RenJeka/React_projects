@@ -22,7 +22,10 @@ import {
     NumberConverterParentComponent,
     JsonFormValidationComponent,
     ListReduxComponent,
-    AsyncTodosComponent
+    AsyncTodosComponent,
+    FunctionPostComponent,
+    FuncCounter,
+    FucReduxCounterComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -127,6 +130,17 @@ class PageComponent extends Component<Props, State> {
                     </summary>
 
                     <ListReduxComponent/>
+                </details>
+
+                <details>
+                    <summary>
+                        Lesson #8
+                    </summary>
+
+                    <FunctionPostComponent myProp={"Property, passed from parent component"}/>
+                    <FuncCounter name={"My functional Counter-1"}/>
+                    <FucReduxCounterComponent/>
+
                 </details>
 
             </div>

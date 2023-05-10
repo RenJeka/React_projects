@@ -1,9 +1,9 @@
 
 export enum RandomCounterActions {
-    INC = 'INC',
-    RANDOM_INC = 'RANDOM_INC',
-    DEC = 'DEC',
-    RESET = 'RESET',
+    INC = 'RANDOM_COUNTER_INCREMENT',
+    RANDOM_INC = 'RANDOM_COUNTER_INCREMENT_RANDOM',
+    DEC = 'RANDOM_COUNTER_DECREMENT',
+    RESET = 'RANDOM_COUNTER_RESET',
 }
 
 export interface IRandomCounterAction {

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {incActionCreator} from "./counterActions";
+import {decActionCreator, incActionCreator, resetActionCreator} from "./counterActions";
 import classes from "./ReduxCounter.component.module.scss";
 import {MyStore} from "../../barrel";
 
@@ -14,14 +14,15 @@ class ReduxCounter extends Component<Props> {
 
     render() {
         return (
-            <div className={classes.counterContainer}>
+            <article className={classes.counterContainer}>
+                <header>Redux counter (class component)</header>
                 <p>{this.props.counterFromStore}</p>
                 <div className={classes.counterControls}>
                     <button onClick={() => this.props.dispatch(incActionCreator())}> Increment</button>
-                    {/*<button onClick={() => this.setState((prevState) => ({count: prevState.count - 1}))}> Decrement</button>*/}
-                    {/*<button onClick={() => this.setState(() => ({count: 0}))}> Reset</button>*/}
+                    <button onClick={() => this.props.dispatch(decActionCreator())}> Decrement</button>
+                    <button onClick={() => this.props.dispatch(resetActionCreator())}> Reset</button>
                 </div>
-            </div>
+            </article>
         );
     }
 }
