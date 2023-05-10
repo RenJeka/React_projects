@@ -1,8 +1,8 @@
 import React from 'react';
 import {decActionCreator, incActionCreator, resetActionCreator} from "../../ReduxCounter/counterActions";
 import {useDispatch, useSelector} from "react-redux";
-import {MyStore} from "../../../redux/initialStore";
 import classes from "./FuncReduxCounter.component.module.scss"
+import {MyStore} from "../../../barrel";
 
 const FucReduxCounterComponent = () => {
 
