@@ -1,5 +1,5 @@
 import {IAsyncPosts} from "./Posts";
-import {IAsyncTodos} from "./Todo";
+import {IAsyncTodos, ITodoList} from "./Todo";
 
 export interface MyStore {
     title: string,
@@ -7,5 +7,6 @@ export interface MyStore {
     list: string[],
     randomCounter: number,
     posts: IAsyncPosts,
-    asyncTodos: IAsyncTodos
+    asyncTodos: IAsyncTodos,
+    todoList: ITodoList
 }
