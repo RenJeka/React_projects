@@ -121,7 +121,7 @@ class PageComponent extends Component<Props, State> {
                         Lesson #6
                     </summary>
 
-                    <PostsComponent/>
+                    {/*<PostsComponent/>*/}
                     <JsonFormValidationComponent/>
                     <AsyncTodosComponent/>
                 </details>

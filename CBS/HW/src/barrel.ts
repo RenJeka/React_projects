@@ -34,6 +34,9 @@ import AComponent from "./components/lesson7/AB/A.component";
 import FunctionPostComponent from "./components/lesson8/FunctionPost/FunctionPost.component";
 import FuncCounter from "./components/lesson8/FuncCounter/FuncCounter";
 import FucReduxCounterComponent from "./components/lesson8/ReduxCounter/FucReduxCounter.component";
+import HomeComponent from "./components/Home/Home.component";
+import HeaderComponent from "./components/Header/Header.component";
+import FooterComponent from "./components/Footer/Footer.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -73,6 +76,9 @@ export {
     FunctionPostComponent,
     FuncCounter,
     FucReduxCounterComponent,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent
 };
 
 export type {
