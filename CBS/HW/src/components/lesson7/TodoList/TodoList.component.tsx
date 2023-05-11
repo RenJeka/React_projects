@@ -67,34 +67,35 @@ class TodoListComponent extends Component<Props, State> {
                     />
                 </td>
                 <td>
-                    <button
+                    <Button
+                        variant="outlined"
                         className={classes.inlineButton}
                         onClick={() => {
                             this.markChecked(todo)
                         }}
-                    >Done
-                    </button>
+                    >Check
+                    </Button>
                 </td>
             </tr>
         })
     }
 
 
-    private addTodo(event: FormEvent<HTMLFormElement>) {
-        event.preventDefault();
-        const formData: FormData = new FormData(event.currentTarget)
-
-        const userTitle: string = (formData.get('title') || '').toString();
-        const userCompleted: boolean = !!formData.get('completed');
-
-        const usersTodo: TodoListItem = {
-            id: Date.now(),
-            title: userTitle,
-            completed: userCompleted
-        };
-        console.log('usersTodo: ', usersTodo);
-        this.props.dispatch(addTodoListAction(usersTodo, event.currentTarget));
-    }
+    // private addTodo(event: FormEvent<HTMLFormElement>) {
+    //     event.preventDefault();
+    //     const formData: FormData = new FormData(event.currentTarget)
+    //
+    //     const userTitle: string = (formData.get('title') || '').toString();
+    //     const userCompleted: boolean = !!formData.get('completed');
+    //
+    //     const usersTodo: TodoListItem = {
+    //         id: Date.now(),
+    //         title: userTitle,
+    //         completed: userCompleted
+    //     };
+    //     console.log('usersTodo: ', usersTodo);
+    //     this.props.dispatch(addTodoListAction(usersTodo, event.currentTarget));
+    // }
 
     private toggleModalHandler() {
         this.setState((state: State) => {
@@ -118,6 +119,7 @@ class TodoListComponent extends Component<Props, State> {
                     <TodoDialogComponent
                         open={this.state.isModalOpen}
                         onApply={(returnedObj) => {this.applyModalHandler(returnedObj)}}
+                        onClose={() => {this.toggleModalHandler()}}
                     />
                     <div>
                         <h3>TODO List:</h3>

@@ -26,7 +26,7 @@ type TodoDispatch = ThunkDispatch<State, any, ITodoListAction>;
 
 
 const TodoDialogComponent = ({open, onApply = () => {} , onClose = () => {}}: Props) => {
-    const [btnDisable, setBtnDisable] = useState<boolean>(false);
+    const [btnDisable, setBtnDisable] = useState<boolean>(true);
     const [todoTitle, setTodoTitle] = useState<string>("");
     const dispatch: TodoDispatch = useDispatch();
     const todoList = useSelector<MyStore, ITodoList>((store) => store.todoList) as ITodoList;
@@ -79,11 +79,13 @@ const TodoDialogComponent = ({open, onApply = () => {} , onClose = () => {}}: Pr
                     {
                         todoList.operationLoading
                         ? <CircularProgress />
-                        : <input type="text"
-                                 onChange={(e) => {
+                        : <input
+                                type="text"
+                                autoFocus={true}
+                                onChange={(e) => {
                                      onChangeHandler(e)
                                  }}
-                                 placeholder={"todo's title"}
+                                placeholder={"todo's title"}
                             />
                     }
 
