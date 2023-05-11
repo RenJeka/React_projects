@@ -40,7 +40,7 @@ export function loadTodoListAction() {
     }
 }
 
-export function addTodoListAction(todoListItem: TodoListItem, form: HTMLFormElement) {
+export function addTodoListAction(todoListItem: TodoListItem, callback: any) {
     return (dispatch: Dispatch<ITodoListAction>) => {
         dispatch({type: TodoListActions.OPERATION_LOADING_START})
 
@@ -49,7 +49,7 @@ export function addTodoListAction(todoListItem: TodoListItem, form: HTMLFormElem
                 type: TodoListActions.OPERATION_ADD,
                 payload: todoListItem
             });
-            form.reset();
+            callback();
         }, 500)
     }
 }
