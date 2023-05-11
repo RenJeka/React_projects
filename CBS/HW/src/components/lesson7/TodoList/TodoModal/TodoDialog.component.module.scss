@@ -1,0 +1,21 @@
+//.dialog {
+//  div {
+//    display: block;
+//    justify-content: initial;
+//    align-items: initial;
+//  }
+//}
+
+.textField {
+  padding: initial;
+
+  input {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    outline: none;
+    border: none;
+  }
+
+}

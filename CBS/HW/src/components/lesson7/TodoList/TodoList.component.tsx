@@ -5,13 +5,32 @@ import {connect} from "react-redux";
 import {addTodoListAction, deleteTodoListAction, toggleCheckTodoListAction} from "./TodoList.actions";
 import IconComponent from './Icon/Icon.component';
 import {IconTypes} from "./Icon/icons";
+import {Button, ScopedCssBaseline} from "@mui/material";
+import {createTheme, ThemeProvider} from "@mui/material/styles";
+import TodoDialogComponent from "./TodoModal/TodoDialog.component";
+import CssBaseline from "@mui/material/CssBaseline";
 
 interface Props {
     todoList: ITodoList,
     dispatch: any
 }
 
-class TodoListComponent extends Component<Props> {
+interface State {
+    isModalOpen: boolean
+}
+
+const darkTheme = createTheme({
+    palette: {
+        mode: 'dark',
+    },
+});
+
+
+class TodoListComponent extends Component<Props, State> {
+
+    state: State = {
+        isModalOpen: false
+    }
 
     private deleteTodo(todo: TodoListItem) {
         this.props.dispatch(deleteTodoListAction(todo));
@@ -23,37 +42,43 @@ class TodoListComponent extends Component<Props> {
 
     private getTodosLayout() {
         return this.props.todoList.todos.map((todo: TodoListItem) => {
-            return  <tr key={'todo_' + todo.id} className={classes.todo}>
-                        <td>
-                            {todo.completed
-                            && <IconComponent
-                                type={IconTypes.CHECKMARK}
-                                className={classes.checkmarkIcon}
-                                size={"30px"}
-                            />
-                            }
-                        </td>
+            return <tr key={'todo_' + todo.id} className={classes.todo}>
+                <td>
+                    {todo.completed
+                    && <IconComponent
+                        type={IconTypes.CHECKMARK}
+                        className={classes.checkmarkIcon}
+                        size={"30px"}
+                    />
+                    }
+                </td>
 
-                        <td>
-                            <li key={'taskName_' + todo.id}>{todo.title}</li>
-                        </td>
-                        <td>
-                            <IconComponent
-                                type={IconTypes.CROSS}
-                                className={classes.deleteBtn}
-                                size={"30px"}
-                                onClick={() => {this.deleteTodo(todo)}}
-                            />
-                        </td>
-                        <td>
-                            <button
-                                className={classes.inlineButton}
-                                onClick={() => {this.markChecked(todo)}}
-                            >Done</button>
-                        </td>
-                    </tr>
+                <td>
+                    <li key={'taskName_' + todo.id}>{todo.title}</li>
+                </td>
+                <td>
+                    <IconComponent
+                        type={IconTypes.CROSS}
+                        className={classes.deleteBtn}
+                        size={"30px"}
+                        onClick={() => {
+                            this.deleteTodo(todo)
+                        }}
+                    />
+                </td>
+                <td>
+                    <button
+                        className={classes.inlineButton}
+                        onClick={() => {
+                            this.markChecked(todo)
+                        }}
+                    >Done
+                    </button>
+                </td>
+            </tr>
         })
     }
+
 
     private addTodo(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -71,43 +96,50 @@ class TodoListComponent extends Component<Props> {
         this.props.dispatch(addTodoListAction(usersTodo, event.currentTarget));
     }
 
+    private toggleModalHandler() {
+        this.setState((state: State) => {
+            return {
+                isModalOpen: !state.isModalOpen
+            }
+        })
+    }
+
+    private applyModalHandler(returnedObj: {todoTitle: string}) {
+        console.log('returnedObj:', returnedObj);
+        this.toggleModalHandler();
+    }
+
+
     render() {
         return (
-            <article>
-                <header >
-                    TODO List:
+            <ThemeProvider theme={darkTheme}>
+                {/*<CssBaseline />*/}
+                <ScopedCssBaseline>
+                    <TodoDialogComponent
+                        open={this.state.isModalOpen}
+                        onApply={(returnedObj) => {this.applyModalHandler(returnedObj)}}
+                    />
+                    <div>
+                        <h3>TODO List:</h3>
+                        <table>
+                            <tbody>
+                            {this.getTodosLayout()}
+                            </tbody>
+                        </table>
 
-                </header>
-                <table>
-                    {this.getTodosLayout()}
-                </table>
-                <footer>
-                    <form
-                        className={classes.form}
-                        onSubmit={(e) => this.addTodo(e)}
-                    >
-                        <label>
-                            Title:
-                            <input name={'title'} type="text" placeholder={"ToDo's title: "}/>
-                        </label>
-                        {/*<label>*/}
-                        {/*    Completed:*/}
-                        {/*    <input name={'completed'} type="checkbox"/>*/}
-                        {/*</label>*/}
-                        <button
-                            aria-busy={this.props.todoList.operationLoading}
-                            type={"submit"}
-                        >
+                        <Button variant="contained" onClick={() => {
+                            this.toggleModalHandler()
+                        }}>
                             <IconComponent
                                 type={IconTypes.PLUS}
                                 color={"lightgreen"}
                                 size={"30px"}
                             />
-                            Add Todo</button>
-                    </form>
-
-                </footer>
-            </article>
+                            Add Todo
+                        </Button>
+                    </div>
+                </ScopedCssBaseline>
+            </ThemeProvider>
         );
     }
 }
