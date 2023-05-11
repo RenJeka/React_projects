@@ -24,6 +24,7 @@ import {
     ListReduxComponent,
     AsyncTodosComponent,
     TodoListComponent,
+    AComponent,
     FunctionPostComponent,
     FuncCounter,
     FucReduxCounterComponent
@@ -132,6 +133,7 @@ class PageComponent extends Component<Props, State> {
 
                     <ListReduxComponent/>
                     <TodoListComponent/>
+                    <AComponent/>
                 </details>
 
                 <details>

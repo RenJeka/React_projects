@@ -30,6 +30,7 @@ import { IAsyncPosts, Post } from "./common/interfaces/Posts";
 import { MyStore } from "./common/interfaces/Store";
 import initialStore from "./redux/initialStore";
 import TodoListComponent from "./components/lesson7/TodoList/TodoList.component";
+import AComponent from "./components/lesson7/AB/A.component";
 import FunctionPostComponent from "./components/lesson8/FunctionPost/FunctionPost.component";
 import FuncCounter from "./components/lesson8/FuncCounter/FuncCounter";
 import FucReduxCounterComponent from "./components/lesson8/ReduxCounter/FucReduxCounter.component";
@@ -68,6 +69,7 @@ export {
     ListReduxComponent,
     AsyncTodosComponent,
     TodoListComponent,
+    AComponent,
     FunctionPostComponent,
     FuncCounter,
     FucReduxCounterComponent,
