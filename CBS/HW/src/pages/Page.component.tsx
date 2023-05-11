@@ -23,7 +23,8 @@ import {
     JsonFormValidationComponent,
     ListReduxComponent,
     AsyncTodosComponent,
-    TodoListComponent
+    TodoListComponent,
+    AComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -129,6 +130,7 @@ class PageComponent extends Component<Props, State> {
 
                     <ListReduxComponent/>
                     <TodoListComponent/>
+                    <AComponent/>
                 </details>
 
             </div>

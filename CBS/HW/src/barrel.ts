@@ -30,6 +30,7 @@ import { IAsyncPosts, Post } from "./common/interfaces/Posts";
 import { MyStore } from "./common/interfaces/Store";
 import initialStore from "./redux/initialStore";
 import TodoListComponent from "./components/lesson7/TodoList/TodoList.component";
+import AComponent from "./components/lesson7/AB/A.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -64,7 +65,8 @@ export {
     PostsComponent,
     ListReduxComponent,
     AsyncTodosComponent,
-    TodoListComponent
+    TodoListComponent,
+    AComponent
 };
 
 export type {
