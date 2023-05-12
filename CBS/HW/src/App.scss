@@ -1,3 +1,5 @@
+$base-font-size: '14px';
+
 @font-face {
   font-family: Caveat;
   src: url("./assets/fonts/Caveat-Regular.ttf");
@@ -20,6 +22,31 @@
   font-family: Caveat;
   src: url("./assets/fonts/Caveat-Bold.ttf");
   font-weight: 700;
+}
+
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+  //color: #121212;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  font-size: $base-font-size;
+}
+
+#root {
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 .App {
@@ -60,12 +87,6 @@
   }
 }
 
-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 @keyframes App-logo-spin {
   from {

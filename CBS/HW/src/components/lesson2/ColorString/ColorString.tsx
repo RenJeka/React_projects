@@ -60,6 +60,7 @@ class ColorString extends Component<Props, State> {
         return (
             <div
                 style={{color: this.state.currentColor}}
+                className={'color-string-wrapper'}
                 onClick={this.changeColor.bind(this)}
             >
                 {phrase}

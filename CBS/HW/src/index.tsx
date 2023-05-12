@@ -4,28 +4,10 @@ import './index.css';
 import App from './App';
 import {Provider} from "react-redux";
 import store from "./redux/configStore";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import LayoutComponent from "./router/Layout.component";
-import {HomeComponent, PageComponent} from "./barrel";
+import {RouterProvider} from "react-router-dom";
+import {router} from "./router/browserRouterRoutes";
 
 
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <LayoutComponent/>,
-        children: [
-            {
-                path: "/page",
-                element: <PageComponent/>,
-            },
-            {
-                path: "/home",
-                element: <HomeComponent/>,
-            }
-        ]
-    },
-
-]);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

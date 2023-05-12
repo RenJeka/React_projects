@@ -5,8 +5,10 @@ import classes from "./Header.component.module.scss";
 const HeaderComponent = () => {
     return (
         <div className={classes.wrapper}>
-            <Link to={"/home"}>HOME</Link>
-            <NavLink to={"/page"}>PAGE</NavLink>
+
+            HEADER
+            {/*<Link to={"/home"}>HOME</Link>*/}
+            {/*<NavLink to={"/page"}>PAGE</NavLink>*/}
         </div>
     );
 };
