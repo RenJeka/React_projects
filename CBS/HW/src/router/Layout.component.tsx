@@ -10,15 +10,15 @@ const LayoutComponent = () => {
             <aside className={classes.aside}>
                 <nav>
                     <ul>
-                        <Link to={"/page"}>Lesson-1</Link>
-                        <Link to={"/page"}>Lesson-2</Link>
-                        <Link to={"/page"}>Lesson-3</Link>
-                        <Link to={"/page"}>Lesson-4</Link>
-                        <Link to={"/page"}>Lesson-5</Link>
-                        <Link to={"/page"}>Lesson-6</Link>
-                        <Link to={"/page"}>Lesson-7</Link>
-                        <Link to={"/page"}>Lesson-8</Link>
-                        <Link to={"/page"}>Lesson-9</Link>
+                        <Link to={"/page"}>All Home works</Link>
+                        <Link to={"/lesson-1"}>Lesson-1</Link>
+                        <Link to={"/lesson-2"}>Lesson-2</Link>
+                        <Link to={"/lesson-3"}>Lesson-3</Link>
+                        <Link to={"/lesson-4"}>Lesson-4</Link>
+                        <Link to={"/lesson-5"}>Lesson-5</Link>
+                        <Link to={"/lesson-6"}>Lesson-6</Link>
+                        <Link to={"/lesson-7"}>Lesson-7</Link>
+                        <Link to={"/lesson-8"}>Lesson-8</Link>
                     </ul>
                 </nav>
             </aside>

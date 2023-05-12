@@ -37,6 +37,14 @@ import FucReduxCounterComponent from "./components/lesson8/ReduxCounter/FucRedux
 import HomeComponent from "./components/Home/Home.component";
 import HeaderComponent from "./components/Header/Header.component";
 import FooterComponent from "./components/Footer/Footer.component";
+import Lesson1HostComponent from "./components/Lesson1Component/Lesson1Hosh.component";
+import Lesson2HostComponent from "./components/lesson2/Lesson2Host.component";
+import Lesson3HostComponent from "./components/lesson3/Lesson3Host.component";
+import Lesson4HostComponent from "./components/lesson4/Lesson4Host.component";
+import Lesson5HostComponent from "./components/lesson5/Lesson5Host.component";
+import Lesson6HostComponent from "./components/lesson6/Lesson6Host.component";
+import Lesson7HostComponent from "./components/lesson7/Lesson7Host.component";
+import Lesson8HostComponent from "./components/lesson8/Lesson8Host.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -78,7 +86,15 @@ export {
     FucReduxCounterComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    Lesson1HostComponent,
+    Lesson2HostComponent,
+    Lesson3HostComponent,
+    Lesson4HostComponent,
+    Lesson5HostComponent,
+    Lesson6HostComponent,
+    Lesson7HostComponent,
+    Lesson8HostComponent,
 };
 
 export type {
