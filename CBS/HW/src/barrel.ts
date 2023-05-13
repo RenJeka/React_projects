@@ -45,6 +45,11 @@ import Lesson5HostComponent from "./components/lesson5/Lesson5Host.component";
 import Lesson6HostComponent from "./components/lesson6/Lesson6Host.component";
 import Lesson7HostComponent from "./components/lesson7/Lesson7Host.component";
 import Lesson8HostComponent from "./components/lesson8/Lesson8Host.component";
+import { IProtectedComponents } from "./common/interfaces/ProtectedComponents";
+import Lesson9HostComponent from './components/lesson9/Lesson9Host.component';
+import IAm18Component from "./components/lesson9/IAm18/IAm18.component";
+import ProtectedRouteWrapperComponent from "./components/lesson9/ProtectedRouteWrapper/ProtectedRouteWrapper.component";
+import LoginComponent from "./components/lesson9/Login/Login.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -95,6 +100,10 @@ export {
     Lesson6HostComponent,
     Lesson7HostComponent,
     Lesson8HostComponent,
+    Lesson9HostComponent,
+    IAm18Component,
+    ProtectedRouteWrapperComponent,
+    LoginComponent
 };
 
 export type {
@@ -105,5 +114,6 @@ export type {
     Post,
     IAsyncPosts,
     TodoListItem,
-    ITodoList
+    ITodoList,
+    IProtectedComponents
 };

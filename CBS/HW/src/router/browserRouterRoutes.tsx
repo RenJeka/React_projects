@@ -2,6 +2,7 @@ import {createBrowserRouter} from "react-router-dom";
 import LayoutComponent from "./Layout.component";
 import {
     HomeComponent,
+    PageComponent,
     Lesson1HostComponent,
     Lesson2HostComponent,
     Lesson3HostComponent,
@@ -10,8 +11,10 @@ import {
     Lesson6HostComponent,
     Lesson7HostComponent,
     Lesson8HostComponent,
-    PageComponent
-} from "../barrel";
+    Lesson9HostComponent,
+    ProtectedRouteWrapperComponent,
+    LoginComponent,
+} from '../barrel';
 import React from "react";
 
 export const router = createBrowserRouter([
@@ -59,6 +62,20 @@ export const router = createBrowserRouter([
             {
                 path: "/lesson-8",
                 element: <Lesson8HostComponent/>,
+            },
+            {
+                path: "/lesson-9",
+                element: <Lesson9HostComponent/>,
+                children: [
+                    {
+                        path: "iam18",
+                        element: <ProtectedRouteWrapperComponent/>,
+                    },
+                ]
+            },
+            {
+                path: "login",
+                element: <LoginComponent/>,
             },
 
         ]

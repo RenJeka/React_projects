@@ -19,6 +19,7 @@ const LayoutComponent = () => {
                         <Link to={"/lesson-6"}>Lesson-6</Link>
                         <Link to={"/lesson-7"}>Lesson-7</Link>
                         <Link to={"/lesson-8"}>Lesson-8</Link>
+                        <Link to={"/lesson-9"}>Lesson-9</Link>
                     </ul>
                 </nav>
             </aside>

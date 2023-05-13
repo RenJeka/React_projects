@@ -18,7 +18,11 @@ const initialStore: MyStore = {
         loading: false,
         operationLoading: false,
         todos: []
+    },
+    protectedComponents: {
+        iAm18: false
     }
+
 }
 
 export default initialStore;

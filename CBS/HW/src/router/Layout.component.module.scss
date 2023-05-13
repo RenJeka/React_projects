@@ -12,9 +12,9 @@
   width: 100%;
   height: 100%;
   display: block;
-  grid-area: 1 / 1 / 13 / 2;
+  grid-area: 1 / 1 / 13 / 3;
   padding: 15px;
-  //background: #bbbbbb29;
+  overflow: auto;
   border-right: 3px solid #a0a0a045;
   text-transform: uppercase;
   font-family: Caveat, Verdana, Arial;
@@ -28,7 +28,7 @@
 .header {
   width: 100%;
   height: 100%;
-  grid-area: 1 / 2 / 2 / 13;
+  grid-area: 1 / 3 / 2 / 13;
   background: #3e4144;
 }
 
@@ -36,15 +36,14 @@
   width: 100%;
   height: 100%;
   display: block;
-  grid-area: 2 / 2 / 12 / 13;
+  grid-area: 2 / 3 / 12 / 13;
   overflow: auto;
   padding: 30px;
-  //background: #68948559;
 }
 
 .footer {
   width: 100%;
   height: 100%;
-  grid-area: 12 / 2 / 13 / 13;
+  grid-area: 12 / 3 / 13 / 13;
   background: #292c2e;
 }
