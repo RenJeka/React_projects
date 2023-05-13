@@ -87,6 +87,11 @@ div {
   }
 }
 
+.active {
+  font-weight: bold;
+  background-color: var(--primary-focus);
+}
+
 
 @keyframes App-logo-spin {
   from {

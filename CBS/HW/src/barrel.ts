@@ -50,6 +50,8 @@ import Lesson9HostComponent from './components/lesson9/Lesson9Host.component';
 import IAm18Component from "./components/lesson9/IAm18/IAm18.component";
 import ProtectedRouteWrapperComponent from "./components/lesson9/ProtectedRouteWrapper/ProtectedRouteWrapper.component";
 import LoginComponent from "./components/lesson9/Login/Login.component";
+import AuthComponent from "./components/lesson10/Auth/Auth.component";
+import Lesson10HostComponent from "./components/lesson10/Lesson10Host.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -103,7 +105,9 @@ export {
     Lesson9HostComponent,
     IAm18Component,
     ProtectedRouteWrapperComponent,
-    LoginComponent
+    LoginComponent,
+    AuthComponent,
+    Lesson10HostComponent
 };
 
 export type {

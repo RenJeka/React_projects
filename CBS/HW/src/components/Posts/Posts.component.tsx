@@ -17,6 +17,7 @@ type TodoDispatch = ThunkDispatch<State, any, PostsAsyncAction>;
 
 const PostsComponent = () => {
 
+    // debugger;
         // setPosts(posts: any[]) {
     //     return posts.map(post => <li key={post.id}>{post.title}</li>);
     // }
@@ -24,6 +25,7 @@ const PostsComponent = () => {
     const dispatch: TodoDispatch = useDispatch();
     dispatch(postActionCreator())
     // useEffect(() => {
+    //     dispatch(postActionCreator())
     //     return () => {
     //         console.log('bye!!');
     //

@@ -1,3 +1,4 @@
 export interface IProtectedComponents {
-    iAm18: boolean,
+    iAm18: boolean;
+    auth: boolean;
 }

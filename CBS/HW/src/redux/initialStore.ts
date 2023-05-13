@@ -20,7 +20,8 @@ const initialStore: MyStore = {
         todos: []
     },
     protectedComponents: {
-        iAm18: false
+        iAm18: false,
+        auth: false,
     }
 
 }

@@ -14,6 +14,9 @@ import {
     Lesson9HostComponent,
     ProtectedRouteWrapperComponent,
     LoginComponent,
+    IAm18Component,
+    Lesson10HostComponent,
+    PostsComponent,
 } from '../barrel';
 import React from "react";
 
@@ -69,14 +72,31 @@ export const router = createBrowserRouter([
                 children: [
                     {
                         path: "iam18",
-                        element: <ProtectedRouteWrapperComponent/>,
+                        // element: <ProtectedRouteWrapperComponent children={IAm18Component}/>,
+                        element: <ProtectedRouteWrapperComponent
+                                    pathToRedirect={"/login"}
+                                    protectedComponentsName={"iAm18"}
+                                >
+                                    <IAm18Component/>
+                                </ProtectedRouteWrapperComponent>
                     },
+                ]
+            },
+            {
+                path: "/lesson-10",
+                element: <Lesson10HostComponent/>,
+                children: [
+                    {
+                        path: "posts",
+                        element: <PostsComponent/>,
+                    }
                 ]
             },
             {
                 path: "login",
                 element: <LoginComponent/>,
             },
+
 
         ]
     },
