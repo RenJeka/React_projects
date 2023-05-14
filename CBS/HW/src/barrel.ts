@@ -23,7 +23,7 @@ import JsonFormComponent from "./components/lesson5/JsonForm/JsonForm.component"
 import NumberConverterParentComponent from "./components/lesson5/NumberConverterParent/NumberConverterParent.component";
 import JsonFormValidationComponent from "./components/lesson6/JsonFormValidation/JsonFormValidation.component";
 import ListReduxComponent from "./components/lesson7/ListRedux/ListRedux.component";
-import PostsComponent from "./components/Posts/Posts.component";
+import PostsComponent from "./components/lesson10/Posts/Posts.component";
 import AsyncTodosComponent from "./components/lesson6/AsyncTodos/AsyncTodos.component";
 import { IAsyncTodos, ITodoList, Todo, TodoListItem, Users } from "./common/interfaces/Todo";
 import { IAsyncPosts, Post } from "./common/interfaces/Posts";

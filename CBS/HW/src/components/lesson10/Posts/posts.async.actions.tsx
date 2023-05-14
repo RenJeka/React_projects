@@ -1,6 +1,6 @@
 import axios from "axios";
 import {Dispatch} from "redux";
-import {Post} from "../../barrel";
+import {Post} from "../../../barrel";
 
 export enum PostsAsyncActions {
     LOADING_START = 'POSTS_LOADING_START',

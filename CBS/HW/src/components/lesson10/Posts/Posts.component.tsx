@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import classes from "./Posts.component.module.scss"
 import {useDispatch, useSelector} from "react-redux";
 import postActionCreator, {PostsAsyncAction} from "./posts.async.actions";
-import {IAsyncPosts, MyStore} from "../../barrel";
+import {IAsyncPosts, MyStore} from "../../../barrel";
 import {ThunkDispatch} from "redux-thunk";
 
 // interface Props {
@@ -13,7 +13,7 @@ import {ThunkDispatch} from "redux-thunk";
 interface State {
 }
 
-type TodoDispatch = ThunkDispatch<State, any, PostsAsyncAction>;
+type PostDispatch = ThunkDispatch<State, any, PostsAsyncAction>;
 
 const PostsComponent = () => {
 
@@ -22,17 +22,19 @@ const PostsComponent = () => {
     //     return posts.map(post => <li key={post.id}>{post.title}</li>);
     // }
     // this.props.dispatch(postActionCreator())
-    const dispatch: TodoDispatch = useDispatch();
-    dispatch(postActionCreator())
-    // useEffect(() => {
-    //     dispatch(postActionCreator())
-    //     return () => {
-    //         console.log('bye!!');
-    //
-    //     }
-    // })
+    const dispatch: PostDispatch = useDispatch();
+    const posts: IAsyncPosts = useSelector<MyStore, IAsyncPosts>((store: MyStore) => store.posts);
+    // dispatch(postActionCreator())
+    useEffect(() => {
+        // tslint:disable-next-line:no-console
+        // console.log('posts', posts);
+        dispatch(postActionCreator())
+        return () => {
+            console.log('bye!!');
 
-    const posts: IAsyncPosts = useSelector<MyStore, IAsyncPosts>((store: MyStore) => store.posts)
+        }
+    }, [dispatch])
+
 
 
     return (
