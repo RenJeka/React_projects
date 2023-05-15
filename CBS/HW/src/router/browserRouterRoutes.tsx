@@ -17,6 +17,7 @@ import {
     IAm18Component,
     Lesson10HostComponent,
     PostsComponent,
+    PostComponent,
 } from '../barrel';
 import React from "react";
 
@@ -89,6 +90,12 @@ export const router = createBrowserRouter([
                     {
                         path: "posts",
                         element: <PostsComponent/>,
+                        children: [
+                            {
+                                path: ":postId",
+                                element: <PostComponent/>,
+                            }
+                        ]
                     }
                 ]
             },

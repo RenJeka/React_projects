@@ -1,9 +1,13 @@
 import React from 'react';
+import { useParams } from 'react-router';
 
 const PostComponent = () => {
+
+    const {postId} = useParams();
+
     return (
         <div>
-            POST
+            POST # {postId}
         </div>
     );
 };
