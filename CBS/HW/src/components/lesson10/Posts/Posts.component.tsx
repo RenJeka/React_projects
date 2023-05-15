@@ -5,6 +5,7 @@ import postActionCreator, {PostsAsyncAction} from "./posts.async.actions";
 import { IAsyncPosts, MyStore } from '../../../barrel';
 import {ThunkDispatch} from "redux-thunk";
 import { Link, Outlet } from 'react-router-dom';
+import RotateLoader from "react-spinners/RotateLoader";
 
 // interface Props {
 //     posts: IAsyncPosts;
@@ -48,7 +49,9 @@ const PostsComponent = () => {
                <ul className={classes.listWrapper}>
                    {
                        asyncPosts.loading
-                           ? <span>Loading...</span>
+                           ? <div className={classes.spinnerWrapper}>
+                               <RotateLoader color={"#19b3e6"}/>
+                           </div>
                            : getPosts(asyncPosts)
                    }
                    {/*{this.setPosts(this.state.posts)}*/}
