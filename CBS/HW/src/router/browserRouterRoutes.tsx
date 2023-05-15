@@ -19,6 +19,10 @@ import {
     PostsComponent,
     PostComponent,
     InternetStoreComponent,
+    ISHomeComponent,
+    ISContactsComponent,
+    ISGoodsComponent,
+    ISGoodComponent,
 } from '../barrel';
 import React from "react";
 
@@ -84,7 +88,31 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: "internet-store",
-                        element: <InternetStoreComponent/>
+                        element: <InternetStoreComponent/>,
+                        children: [
+                            {
+                                path: "home",
+                                element: <ISHomeComponent/>,
+                            },
+                            {
+                                path: "contacts",
+                                element: <ISContactsComponent/>,
+                            },
+                            {
+                                path: "goods",
+                                element: <ISGoodsComponent/>,
+                                // children: [
+                                //     {
+                                //         path: ":goodId",
+                                //         element: <ISGoodComponent/>,
+                                //     }
+                                // ]
+                            },
+                            {
+                                path: "goods/:goodId",
+                                element: <ISGoodComponent/>,
+                            }
+                        ]
                     },
                 ]
             },

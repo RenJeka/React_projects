@@ -54,6 +54,10 @@ import AuthComponent from "./components/lesson10/Auth/Auth.component";
 import Lesson10HostComponent from "./components/lesson10/Lesson10Host.component";
 import PostComponent from "./components/lesson10/Post/Post.component";
 import InternetStoreComponent from "./components/lesson9/InternetStore/InternetStore.component";
+import ISHomeComponent from "./components/lesson9/InternetStore/ISHome/ISHome.component";
+import ISContactsComponent from "./components/lesson9/InternetStore/ISContacts/ISContacts.component";
+import ISGoodsComponent from "./components/lesson9/InternetStore/ISGoods/ISGoods.component";
+import ISGoodComponent from "./components/lesson9/InternetStore/ISGoods/ISGood/ISGood.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -111,7 +115,11 @@ export {
     AuthComponent,
     Lesson10HostComponent,
     PostComponent,
-    InternetStoreComponent
+    InternetStoreComponent,
+    ISHomeComponent,
+    ISContactsComponent,
+    ISGoodsComponent,
+    ISGoodComponent
 };
 
 export type {
