@@ -1,6 +1,7 @@
 import {IAsyncPosts} from "./Posts";
 import {IAsyncTodos, ITodoList} from "./Todo";
 import {IProtectedComponents} from './ProtectedComponents';
+import {IInternetStore} from "./InternetStore";
 
 export interface MyStore {
     title: string,
@@ -10,6 +11,6 @@ export interface MyStore {
     posts: IAsyncPosts,
     asyncTodos: IAsyncTodos,
     todoList: ITodoList,
-    protectedComponents: IProtectedComponents
-
+    protectedComponents: IProtectedComponents,
+    internetStore: IInternetStore
 }

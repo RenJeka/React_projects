@@ -58,6 +58,7 @@ import ISHomeComponent from "./components/lesson9/InternetStore/ISHome/ISHome.co
 import ISContactsComponent from "./components/lesson9/InternetStore/ISContacts/ISContacts.component";
 import ISGoodsComponent from "./components/lesson9/InternetStore/ISGoods/ISGoods.component";
 import ISGoodComponent from "./components/lesson9/InternetStore/ISGoods/ISGood/ISGood.component";
+import {IInternetStore, Product } from "./common/interfaces/InternetStore";
 
 const images = {
     reactLogo: reactLogo,
@@ -128,8 +129,10 @@ export type {
     Users,
     IAsyncTodos,
     Post,
+    Product,
     IAsyncPosts,
     TodoListItem,
     ITodoList,
-    IProtectedComponents
+    IProtectedComponents,
+    IInternetStore,
 };

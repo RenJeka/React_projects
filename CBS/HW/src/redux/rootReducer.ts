@@ -5,8 +5,9 @@ import {randomCounterReducer} from "../components/lesson5/ReduxRandomCounter/ran
 import {postsReducer} from "../components/lesson10/Posts/posts.reducer";
 import {listReducer} from "../components/lesson7/ListRedux/listReducer";
 import {asyncTodosReducer} from "../components/lesson6/AsyncTodos/asyncTodos.reducer";
-import { todoListReducer } from "../components/lesson7/TodoList/TodoList.reducer";
-import { protectedComponentsReducer } from '../components/lesson9/ProtectedRouteWrapper/protectedComponents.reducer';
+import {todoListReducer} from "../components/lesson7/TodoList/TodoList.reducer";
+import {protectedComponentsReducer} from '../components/lesson9/ProtectedRouteWrapper/protectedComponents.reducer';
+import {internetStoreReducer} from "../components/lesson9/InternetStore/internetStore.reducer";
 
 export const reducer = combineReducers(
     {
@@ -17,6 +18,7 @@ export const reducer = combineReducers(
         posts: postsReducer,
         asyncTodos: asyncTodosReducer,
         todoList: todoListReducer,
-        protectedComponents: protectedComponentsReducer
+        protectedComponents: protectedComponentsReducer,
+        internetStore: internetStoreReducer
     }
 );

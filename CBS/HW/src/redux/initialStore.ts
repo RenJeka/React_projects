@@ -22,7 +22,13 @@ const initialStore: MyStore = {
     protectedComponents: {
         iAm18: false,
         auth: false,
-    }
+    },
+    internetStore: {
+        loading: false,
+        products: [],
+        productLoading: false,
+        currentProduct: null
+    },
 
 }
 
