@@ -18,6 +18,7 @@ import {
     Lesson10HostComponent,
     PostsComponent,
     PostComponent,
+    InternetStoreComponent,
 } from '../barrel';
 import React from "react";
 
@@ -80,6 +81,10 @@ export const router = createBrowserRouter([
                                 >
                                     <IAm18Component/>
                                 </ProtectedRouteWrapperComponent>
+                    },
+                    {
+                        path: "internet-store",
+                        element: <InternetStoreComponent/>
                     },
                 ]
             },

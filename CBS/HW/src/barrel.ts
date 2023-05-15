@@ -53,6 +53,7 @@ import LoginComponent from "./components/lesson9/Login/Login.component";
 import AuthComponent from "./components/lesson10/Auth/Auth.component";
 import Lesson10HostComponent from "./components/lesson10/Lesson10Host.component";
 import PostComponent from "./components/lesson10/Post/Post.component";
+import InternetStoreComponent from "./components/lesson9/InternetStore/InternetStore.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -109,7 +110,8 @@ export {
     LoginComponent,
     AuthComponent,
     Lesson10HostComponent,
-    PostComponent
+    PostComponent,
+    InternetStoreComponent
 };
 
 export type {
