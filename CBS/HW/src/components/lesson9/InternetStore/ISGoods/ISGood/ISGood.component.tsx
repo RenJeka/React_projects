@@ -40,8 +40,25 @@ const ISGoodComponent = () => {
                     ?   <div className={classes.spinnerWrapper}>
                             <RotateLoader color={"#19b3e6"}/>
                         </div>
-                    :   <div>
+                    :   <div className={classes.productWrapper}>
                             {internetStore.currentProduct?.title}
+                            <div className={classes.imageWrapper}>
+                                <img src={internetStore.currentProduct?.images[0]} alt=""/>
+                            </div>
+                            <div className={classes.tableWrapper}>
+                                <table>
+                                    <thead>
+                                        <th>Characteristic name</th>
+                                        <th>Characteristic value</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
             }
         </div>
