@@ -41,6 +41,8 @@ const InternetStoreComponent = () => {
         <div className={classes.wrapper}>
             <aside className={classes.aside}>
                 <nav>
+                    <span className={classes.asideHeader}>Chose your product:</span>
+
                     <ul>
                         {
                             internetStore.loading
@@ -49,11 +51,6 @@ const InternetStoreComponent = () => {
                                     </div>
                                 : getProductsName(internetStore.products)
                         }
-                        {/*<NavLink to={"goods/1"}>Good-1</NavLink>*/}
-                        {/*<NavLink to={"goods/2"}>Good-2</NavLink>*/}
-                        {/*<NavLink to={"goods/3"}>Good-3</NavLink>*/}
-                        {/*<NavLink to={"goods/4"}>Good-4</NavLink>*/}
-                        {/*<NavLink to={"goods/5"}>Good-5</NavLink>*/}
                     </ul>
                 </nav>
             </aside>

@@ -28,6 +28,13 @@
 
   nav {
     height: 100%;
+
+    .asideHeader {
+      display: block;
+      width: 100%;
+      border-bottom: 2px solid #6d7d73;
+
+    }
     ul {
       height: 100%;
       display: flex;

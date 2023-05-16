@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: #4f4f4f;;
+  //background-color: #4f4f4f;;
 }
 
 .spinnerWrapper {
@@ -13,16 +13,25 @@
 }
 
 .productWrapper {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  overflow: auto;
 }
 
 .imageWrapper {
   flex-basis: 33%;
-  background-color: #794444;
+  //background-color: #794444;
+
+  img {
+    object-fit: contain;
+  }
 }
 
 .tableWrapper {
   flex-basis: 67%;
-  background-color: #4e7944;
+  padding: 30px 15px 0;
+  margin-left: 30px;
+  align-self: flex-start;
+  //background-color: #4e7944;
 }

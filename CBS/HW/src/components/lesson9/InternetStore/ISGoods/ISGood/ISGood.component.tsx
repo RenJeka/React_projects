@@ -41,21 +41,56 @@ const ISGoodComponent = () => {
                             <RotateLoader color={"#19b3e6"}/>
                         </div>
                     :   <div className={classes.productWrapper}>
-                            {internetStore.currentProduct?.title}
+                            {/*{internetStore.currentProduct?.title}*/}
                             <div className={classes.imageWrapper}>
                                 <img src={internetStore.currentProduct?.images[0]} alt=""/>
                             </div>
                             <div className={classes.tableWrapper}>
                                 <table>
                                     <thead>
-                                        <th>Characteristic name</th>
-                                        <th>Characteristic value</th>
+                                        <tr>
+                                            <th>Characteristic name</th>
+                                            <th>Characteristic value</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>1</td>
-                                            <td>2</td>
+                                            <td>Id: </td>
+                                            <td>{internetStore.currentProduct?.id}</td>
                                         </tr>
+                                        <tr>
+                                            <td>Category: </td>
+                                            <td>{internetStore.currentProduct?.category}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brand: </td>
+                                            <td>{internetStore.currentProduct?.brand}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Name: </td>
+                                            <td>{internetStore.currentProduct?.title}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Description: </td>
+                                            <td>{internetStore.currentProduct?.description}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Price: </td>
+                                            <td>${internetStore.currentProduct?.price}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rating: </td>
+                                            <td>{internetStore.currentProduct?.rating}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Stock: </td>
+                                            <td>{internetStore.currentProduct?.stock}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discount percentage: </td>
+                                            <td>{internetStore.currentProduct?.discountPercentage}</td>
+                                        </tr>
+
                                     </tbody>
                                 </table>
                             </div>
