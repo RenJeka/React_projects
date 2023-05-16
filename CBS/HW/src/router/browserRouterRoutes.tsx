@@ -23,6 +23,7 @@ import {
     ISContactsComponent,
     ISProductsComponent,
     ISProductComponent,
+    Lesson11HostComponent,
 } from '../barrel';
 import React from "react";
 
@@ -136,6 +137,10 @@ export const router = createBrowserRouter([
             {
                 path: "login",
                 element: <LoginComponent/>,
+            },
+            {
+                path: "/lesson-11",
+                element: <Lesson11HostComponent/>,
             },
 
 

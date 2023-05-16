@@ -21,7 +21,10 @@ const initialStore: MyStore = {
     },
     protectedComponents: {
         iAm18: false,
-        auth: false,
+        auth: {
+            name: null,
+            modal: false
+        },
     },
     internetStore: {
         loading: false,

@@ -16,7 +16,54 @@ export const  protectedComponentsReducer = (
         case AuthActions.SET: {
             return {
                 ...protectedComponents,
-                auth: action.payload || false
+                auth: {
+                    name: action.payload || false,
+                    modal: false
+                }
+            };
+        }
+
+        case AuthActions.LOGIN: {
+            return {
+                ...protectedComponents,
+                auth: {
+                    ...protectedComponents.auth,
+                    name: 'name',
+                    modal: true
+                }
+            };
+        }
+
+        case AuthActions.LOGOUT: {
+            return {
+                ...protectedComponents,
+                auth: {
+                    ...protectedComponents.auth,
+                    name: action.payload || '',
+                    modal: false
+                }
+            };
+        }
+
+        case AuthActions.MODAL_OPEN: {
+            return {
+                ...protectedComponents,
+                auth: {
+                    ...protectedComponents.auth,
+                    name: 'name',
+                    modal: true
+                }
+            };
+        }
+
+        case AuthActions.MODAL_CLOSE: {
+            return {
+                ...protectedComponents,
+                auth: {
+                    ...protectedComponents.auth,
+                    name: action.payload || '',
+                    modal: false
+                }
             };
         }
 

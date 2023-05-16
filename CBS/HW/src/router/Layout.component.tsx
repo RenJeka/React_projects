@@ -20,6 +20,7 @@ const LayoutComponent = () => {
                         <NavLink  to={"/lesson-8"}>Lesson-8</NavLink>
                         <NavLink  to={"/lesson-9"}>Lesson-9</NavLink>
                         <NavLink  to={"/lesson-10"}>Lesson-10</NavLink>
+                        <NavLink  to={"/lesson-11"}>Lesson-11</NavLink>
                     </ul>
                 </nav>
             </aside>
