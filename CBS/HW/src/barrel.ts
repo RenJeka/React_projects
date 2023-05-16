@@ -56,8 +56,8 @@ import PostComponent from "./components/lesson10/Post/Post.component";
 import InternetStoreComponent from "./components/lesson9/InternetStore/InternetStore.component";
 import ISHomeComponent from "./components/lesson9/InternetStore/ISHome/ISHome.component";
 import ISContactsComponent from "./components/lesson9/InternetStore/ISContacts/ISContacts.component";
-import ISGoodsComponent from "./components/lesson9/InternetStore/ISGoods/ISGoods.component";
-import ISGoodComponent from "./components/lesson9/InternetStore/ISGoods/ISGood/ISGood.component";
+import ISProductsComponent from "./components/lesson9/InternetStore/ISProducts/ISProducts.component";
+import ISProductComponent from "./components/lesson9/InternetStore/ISProducts/ISProduct/ISProduct.component";
 import {IInternetStore, Product } from "./common/interfaces/InternetStore";
 
 const images = {
@@ -119,8 +119,8 @@ export {
     InternetStoreComponent,
     ISHomeComponent,
     ISContactsComponent,
-    ISGoodsComponent,
-    ISGoodComponent
+    ISProductsComponent,
+    ISProductComponent
 };
 
 export type {

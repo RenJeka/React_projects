@@ -22,7 +22,7 @@ export function internetStoreActionCreator() {
 
         setTimeout(() => {
             getProducts();
-        }, 1500)
+        }, 1000)
 
         function getProducts() {
             axios('https://dummyjson.com/products')
@@ -47,7 +47,7 @@ export function internetStoreProductActionCreator(productId: number) {
 
         setTimeout(() => {
             getProducts();
-        }, 1500)
+        }, 1000)
 
         function getProducts() {
             axios(`https://dummyjson.com/products/${productId}`)

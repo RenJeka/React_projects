@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Params, useParams} from "react-router";
+import { useParams} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
 import {IInternetStore} from "../../../../../common/interfaces/InternetStore";
 import {MyStore} from "../../../../../common/interfaces/Store";
@@ -9,25 +9,21 @@ import {
 } from "../../internetStore.actions";
 import {ThunkDispatch} from "redux-thunk";
 import RotateLoader from "react-spinners/RotateLoader";
-import classes from "./ISGood.component.module.scss"
-
-// interface IGoodParams {
-//     goodId: string
-// }
+import classes from "./ISProduct.component.module.scss"
 
 interface State {
 }
 
 type InternetStoreDispatch = ThunkDispatch<State, any, IInternetStoreAction>;
 
-const ISGoodComponent = () => {
+const ISProductComponent = () => {
 
     const params = useParams();
     const dispatch: InternetStoreDispatch = useDispatch();
     const internetStore: IInternetStore = useSelector<MyStore,IInternetStore>((store: MyStore) => store.internetStore);
 
     useEffect(() => {
-        dispatch(internetStoreProductActionCreator(parseInt(params.goodId as string)));
+        dispatch(internetStoreProductActionCreator(parseInt(params.productId as string)));
         return () => {
             console.log('component "InternetStoreComponent" unmounted!');
         }
@@ -100,4 +96,4 @@ const ISGoodComponent = () => {
     );
 };
 
-export default ISGoodComponent;
+export default ISProductComponent;

@@ -32,7 +32,7 @@ const InternetStoreComponent = () => {
             filteredProducts = [...products]
         }
         return filteredProducts.map((product: Product) => {
-            return <NavLink key={product.id} to={`goods/${product.id}`}>{product.title}</NavLink>
+            return <NavLink key={product.id} to={`products/${product.id}`}>{product.title}</NavLink>
         });
     }
     console.log('internetStore:', internetStore);
