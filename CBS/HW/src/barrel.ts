@@ -61,6 +61,7 @@ import ISProductComponent from "./components/lesson9/InternetStore/ISProducts/IS
 import {IInternetStore, Product } from "./common/interfaces/InternetStore";
 import ClockFuncComponent from "./components/lesson8/ClockFunc/ClockFunc.component";
 import Lesson11HostComponent from "./components/lesson11/Lesson11Host.component";
+import UseEffectComponent from "./components/lesson8/useEffect/useEffect.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -124,7 +125,8 @@ export {
     ISProductsComponent,
     ISProductComponent,
     ClockFuncComponent,
-    Lesson11HostComponent
+    Lesson11HostComponent,
+    UseEffectComponent
 };
 
 export type {
