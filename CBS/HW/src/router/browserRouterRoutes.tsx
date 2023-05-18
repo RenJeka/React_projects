@@ -126,10 +126,9 @@ export const router = createBrowserRouter([
                         path: "posts",
                         // element: <PostsComponent/>,
                         element: <ProtectedRouteWrapperComponent
-                            pathToRedirect={"/login"}
-                            protectedComponentsName={"iAm18"}
+                            protectedComponentsName={"auth"}
                         >
-                            <IAm18Component/>
+                            <PostsComponent/>
                         </ProtectedRouteWrapperComponent>,
                         children: [
                             {
@@ -144,6 +143,10 @@ export const router = createBrowserRouter([
                 path: "login",
                 element: <LoginComponent/>,
             },
+            // {
+            //     path: "auth",
+            //     element: <AuthComponent/>,
+            // },
             {
                 path: "/lesson-11",
                 element: <Lesson11HostComponent/>,

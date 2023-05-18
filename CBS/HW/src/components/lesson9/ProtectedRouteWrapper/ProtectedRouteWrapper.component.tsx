@@ -12,7 +12,7 @@ import {setIAm18ActionCreator} from './protectedComponents.actions';
 interface Props {
     // authType: AuthTypes;
     protectedComponentsName: keyof IProtectedComponents;
-    pathToRedirect: string;
+    pathToRedirect?: string;
     children?: JSX.Element;
 }
 
@@ -24,6 +24,7 @@ const ProtectedRouteWrapperComponent = (props: Props) => {
     // tslint:disable-next-line:no-console
     console.log('protectedComponents: ', protectedComponents);
 
+    const navigateToRedirectPath = <Navigate to={props.pathToRedirect || '#'}/>;
     // switch (props.authType) {
     //     case AuthTypes.AUTH: {
     //         return  protectedComponents.iAm18
@@ -44,22 +45,22 @@ const ProtectedRouteWrapperComponent = (props: Props) => {
     switch (props.protectedComponentsName) {
         case 'auth': {
             if (!protectedComponents.auth.name) {
-                return <Navigate to={props.pathToRedirect}/>;
+                return navigateToRedirectPath;
             } else {
-                return props.children ? props.children : <Navigate to={props.pathToRedirect}/>
+                return props.children ? props.children : navigateToRedirectPath
             }
         }
 
         case 'iAm18': {
             if (!protectedComponents.iAm18) {
-                return <Navigate to={props.pathToRedirect}/>;
+                return navigateToRedirectPath;
             } else {
-                return props.children ? props.children : <Navigate to={props.pathToRedirect}/>
+                return props.children ? props.children : navigateToRedirectPath
             }
         }
 
         default: {
-            return props.children ? props.children : <Navigate to={props.pathToRedirect}/>
+            return props.children ? props.children : navigateToRedirectPath
         }
     }
 

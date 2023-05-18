@@ -7,7 +7,6 @@ const Lesson10HostComponent = () => {
         <div>
             <h2>Lesson #10</h2>
 
-            <AuthComponent/>
             <Link to={"posts"}>Posts</Link>
             <Outlet/>
         </div>
