@@ -41,18 +41,28 @@ const ProtectedRouteWrapperComponent = (props: Props) => {
     //         return <Navigate to={'/login'}/>
     //     }
 
-    if (typeof protectedComponents[props.protectedComponentsName] === 'object') {
-        if (!protectedComponents[props.protectedComponentsName].name) {
-            return <Navigate to={props.pathToRedirect}/>;
-        } else {
+    switch (props.protectedComponentsName) {
+        case 'auth': {
+            if (!protectedComponents.auth.name) {
+                return <Navigate to={props.pathToRedirect}/>;
+            } else {
+                return props.children ? props.children : <Navigate to={props.pathToRedirect}/>
+            }
+        }
+
+        case 'iAm18': {
+            if (!protectedComponents.iAm18) {
+                return <Navigate to={props.pathToRedirect}/>;
+            } else {
+                return props.children ? props.children : <Navigate to={props.pathToRedirect}/>
+            }
+        }
+
+        default: {
             return props.children ? props.children : <Navigate to={props.pathToRedirect}/>
         }
     }
-    if (!protectedComponents[props.protectedComponentsName]) {
-        return <Navigate to={props.pathToRedirect}/>;
-    }
 
-    return props.children ? props.children : <Navigate to={props.pathToRedirect}/>
 };
 
 export default ProtectedRouteWrapperComponent;

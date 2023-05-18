@@ -42,7 +42,9 @@ const AuthComponent = () => {
                                 dispatch(loginAuthActionCreator());
                                 dispatch(modalCloseAuthActionCreator())
                             }}>Login</button>
-                        }/>
+                        }
+                        closeHandler={() => {dispatch(modalCloseAuthActionCreator())}}
+                    />
             }
         </div>
     );
