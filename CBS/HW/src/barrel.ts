@@ -59,6 +59,7 @@ import ISContactsComponent from "./components/lesson9/InternetStore/ISContacts/I
 import ISProductsComponent from "./components/lesson9/InternetStore/ISProducts/ISProducts.component";
 import ISProductComponent from "./components/lesson9/InternetStore/ISProducts/ISProduct/ISProduct.component";
 import {IInternetStore, Product } from "./common/interfaces/InternetStore";
+import ClockFuncComponent from "./components/lesson8/ClockFunc/ClockFunc.component";
 import Lesson11HostComponent from "./components/lesson11/Lesson11Host.component";
 
 const images = {
@@ -122,6 +123,7 @@ export {
     ISContactsComponent,
     ISProductsComponent,
     ISProductComponent,
+    ClockFuncComponent,
     Lesson11HostComponent
 };
 

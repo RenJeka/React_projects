@@ -1,5 +1,5 @@
 import React from 'react';
-import {FucReduxCounterComponent, FuncCounter, FunctionPostComponent} from "../../barrel";
+import {ClockFuncComponent, FucReduxCounterComponent, FuncCounter, FunctionPostComponent} from "../../barrel";
 
 const Lesson8HostComponent = () => {
     return (
@@ -8,6 +8,8 @@ const Lesson8HostComponent = () => {
             <FunctionPostComponent myProp={"Property, passed from parent component"}/>
             <FuncCounter name={"My functional Counter-1"}/>
             <FucReduxCounterComponent/>
+            <hr/>
+            <ClockFuncComponent/>
         </div>
     );
 };
