@@ -31,30 +31,26 @@ export const setAuthActionCreator:ActionCreator<IProtectedComponentsAction> = (v
     }
 }
 
-export const loginAuthActionCreator:ActionCreator<IProtectedComponentsAction> = (value = false) => {
+export const loginAuthActionCreator:ActionCreator<IProtectedComponentsAction> = () => {
     return {
         type: AuthActions.LOGIN,
-        payload: value
     }
 }
 
-export const logoutAuthActionCreator:ActionCreator<IProtectedComponentsAction> = (value = false) => {
+export const logoutAuthActionCreator:ActionCreator<IProtectedComponentsAction> = () => {
     return {
         type: AuthActions.LOGOUT,
-        payload: value
     }
 }
 
-export const modalOpenAuthActionCreator:ActionCreator<IProtectedComponentsAction> = (value = false) => {
+export const modalOpenAuthActionCreator:ActionCreator<IProtectedComponentsAction> = () => {
     return {
         type: AuthActions.MODAL_OPEN,
-        payload: value
     }
 }
 
-export const modalCloseAuthActionCreator:ActionCreator<IProtectedComponentsAction> = (value = false) => {
+export const modalCloseAuthActionCreator:ActionCreator<IProtectedComponentsAction> = () => {
     return {
         type: AuthActions.MODAL_CLOSE,
-        payload: value
     }
 }

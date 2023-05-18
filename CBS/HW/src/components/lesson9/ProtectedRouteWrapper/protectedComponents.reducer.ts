@@ -28,8 +28,7 @@ export const  protectedComponentsReducer = (
                 ...protectedComponents,
                 auth: {
                     ...protectedComponents.auth,
-                    name: 'name',
-                    modal: true
+                    name: 'Admin',
                 }
             };
         }
@@ -40,7 +39,6 @@ export const  protectedComponentsReducer = (
                 auth: {
                     ...protectedComponents.auth,
                     name: action.payload || '',
-                    modal: false
                 }
             };
         }
@@ -50,7 +48,6 @@ export const  protectedComponentsReducer = (
                 ...protectedComponents,
                 auth: {
                     ...protectedComponents.auth,
-                    name: 'name',
                     modal: true
                 }
             };
@@ -61,7 +58,6 @@ export const  protectedComponentsReducer = (
                 ...protectedComponents,
                 auth: {
                     ...protectedComponents.auth,
-                    name: action.payload || '',
                     modal: false
                 }
             };

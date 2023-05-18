@@ -5,8 +5,8 @@ import classes from "./Modal.component.module.scss"
 
 interface Props {
     text?: string,
-    closeHandler?: () => {},
-    action?: any
+    closeHandler?: any,
+    action?: JSX.Element
 }
 
 const ModalComponent = (props: Props) => {
@@ -15,14 +15,12 @@ const ModalComponent = (props: Props) => {
     return (
         <div>
             <PortalComponent>
-                <div className={classes.modalWrapper}>
+                <div className={classes.modalWrapper} onClick={closeHandler}></div>
+                <div className={classes.modal}>
+                    {text}
 
-                </div>
-                <div className="modal">
-                    {text }
-
-                    <div className={classes.modalBtn}>
-                        <button className={classes.btn}>Close</button>
+                    <div className={classes.modalButtons}>
+                        <button className={classes.btn} onClick={closeHandler}>Close</button>
                         {action}
                     </div>
                 </div>

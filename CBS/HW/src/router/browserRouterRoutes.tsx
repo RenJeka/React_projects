@@ -23,7 +23,7 @@ import {
     ISContactsComponent,
     ISProductsComponent,
     ISProductComponent,
-    Lesson11HostComponent,
+    Lesson11HostComponent, AuthComponent,
 } from '../barrel';
 import React from "react";
 
@@ -124,7 +124,13 @@ export const router = createBrowserRouter([
                 children: [
                     {
                         path: "posts",
-                        element: <PostsComponent/>,
+                        // element: <PostsComponent/>,
+                        element: <ProtectedRouteWrapperComponent
+                            pathToRedirect={"/login"}
+                            protectedComponentsName={"iAm18"}
+                        >
+                            <IAm18Component/>
+                        </ProtectedRouteWrapperComponent>,
                         children: [
                             {
                                 path: ":postId",
@@ -141,6 +147,12 @@ export const router = createBrowserRouter([
             {
                 path: "/lesson-11",
                 element: <Lesson11HostComponent/>,
+                children: [
+                    {
+                        path: "auth",
+                        element: <AuthComponent/>,
+                    }
+                ]
             },
 
 
