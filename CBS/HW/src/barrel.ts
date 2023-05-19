@@ -1,6 +1,7 @@
 import reactLogo from "./assets/images/reactLogo.png"
 import reactWallpaper from "./assets/images/react_wallpaper.jpg"
-import { Color } from "./common/enum/Color"
+import { Color } from "./common/enum/Color";
+import useInput from "./common/hooks/useInput";
 import Lesson1Component from "./components/Lesson1Component/Lesson1Component";
 import Counter from "./components/lesson3/Counter/Counter";
 import ColorString from "./components/lesson2/ColorString/ColorString";
@@ -62,7 +63,8 @@ import {IInternetStore, Product } from "./common/interfaces/InternetStore";
 import ClockFuncComponent from "./components/lesson8/ClockFunc/ClockFunc.component";
 import Lesson11HostComponent from "./components/lesson11/Lesson11Host.component";
 import UseEffectComponent from "./components/lesson8/useEffect/useEffect.component";
-import UseMemoComponent from "./components/lesson8/UseMemo/UseMemo.component";
+import ReactMemoParentComponent from "./components/lesson8/ReactMemoParent/ReactMemoParent.component";
+
 
 const images = {
     reactLogo: reactLogo,
@@ -73,6 +75,7 @@ export {
     initialStore,
     images,
     Color,
+    useInput,
     Lesson1Component,
     ColorString,
     Counter,
@@ -128,7 +131,7 @@ export {
     ClockFuncComponent,
     Lesson11HostComponent,
     UseEffectComponent,
-    UseMemoComponent
+    ReactMemoParentComponent
 };
 
 export type {

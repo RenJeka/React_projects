@@ -19,14 +19,14 @@ const ClockFuncComponent = () => {
 
         return () => {
             clearInterval(timerID);
-            console.log('Bue, Clock!');
+            // console.log('Bue, Clock!');
         }
     })
 
     return (
         <div>
-            <h1>Привет, мир!</h1>
-            <h2>Сейчас {date.toLocaleTimeString()}.</h2>
+            <h4>Clock with functional component:</h4>
+            <h5>Now is: {date.toLocaleTimeString()}.</h5>
         </div>
     );
 }

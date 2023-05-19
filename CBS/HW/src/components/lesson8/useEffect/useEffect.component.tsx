@@ -10,9 +10,9 @@ const UseEffectComponent = () => {
         console.log('UseEffectComponent mounted!');
 
 
-        return () => {
-            console.log('UseEffectComponent unmounted!');
-        }
+        // return () => {
+        //     console.log('UseEffectComponent unmounted!');
+        // }
     });
 
     useEffect(() => {
