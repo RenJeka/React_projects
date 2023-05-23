@@ -23,7 +23,7 @@ import {
     ISContactsComponent,
     ISProductsComponent,
     ISProductComponent,
-    Lesson11HostComponent, AuthComponent,
+    Lesson11HostComponent, AuthComponent, ErrorPage,
 } from '../barrel';
 import React from "react";
 
@@ -31,6 +31,7 @@ export const router = createBrowserRouter([
     {
         path: "/",
         element: <LayoutComponent/>,
+        errorElement: <ErrorPage/>,
         children: [
             {
                 index: true,

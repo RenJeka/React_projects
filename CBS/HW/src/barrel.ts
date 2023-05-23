@@ -60,6 +60,8 @@ import ISProductsComponent from "./components/lesson9/InternetStore/ISProducts/I
 import ISProductComponent from "./components/lesson9/InternetStore/ISProducts/ISProduct/ISProduct.component";
 import {IInternetStore, Product } from "./common/interfaces/InternetStore";
 import Lesson11HostComponent from "./components/lesson11/Lesson11Host.component";
+import ErrorBoundaryComponent from "./components/lesson10/ErrorBoundary/ErrorBoundary.component";
+import ErrorPage from "./router/ErrorPage.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -122,7 +124,9 @@ export {
     ISContactsComponent,
     ISProductsComponent,
     ISProductComponent,
-    Lesson11HostComponent
+    Lesson11HostComponent,
+    ErrorBoundaryComponent,
+    ErrorPage
 };
 
 export type {
