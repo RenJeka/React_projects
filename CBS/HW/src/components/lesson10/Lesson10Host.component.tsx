@@ -1,15 +1,17 @@
 import React from 'react';
-import {AuthComponent, PostsComponent} from "../../barrel";
+import {AuthComponent, ErrorBoundaryComponent, PostsComponent} from "../../barrel";
 import {Link, Outlet} from "react-router-dom";
 
 const Lesson10HostComponent = () => {
     return (
-        <div>
-            <h2>Lesson #10</h2>
+        <ErrorBoundaryComponent>
+            <div>
+                <h2>Lesson #10</h2>
 
-            <Link to={"posts"}>Posts</Link>
-            <Outlet/>
-        </div>
+                <Link to={"posts"}>Posts</Link>
+                <Outlet/>
+            </div>
+        </ErrorBoundaryComponent>
     );
 };
 

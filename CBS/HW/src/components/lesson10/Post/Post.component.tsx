@@ -14,6 +14,7 @@ const PostComponent = () => {
                 setPost(response.data);
             });
     }, [postId]);
+    throw new Error('my cool Error!');
     return (
         <div>
             POST: {post?.title}

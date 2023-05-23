@@ -64,7 +64,8 @@ import ClockFuncComponent from "./components/lesson8/ClockFunc/ClockFunc.compone
 import Lesson11HostComponent from "./components/lesson11/Lesson11Host.component";
 import UseEffectComponent from "./components/lesson8/useEffect/useEffect.component";
 import ReactMemoParentComponent from "./components/lesson8/ReactMemoParent/ReactMemoParent.component";
-
+import ErrorBoundaryComponent from "./components/lesson10/ErrorBoundary/ErrorBoundary.component";
+import ErrorPage from "./router/ErrorPage.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -131,7 +132,9 @@ export {
     ClockFuncComponent,
     Lesson11HostComponent,
     UseEffectComponent,
-    ReactMemoParentComponent
+    ReactMemoParentComponent,
+    ErrorBoundaryComponent,
+    ErrorPage
 };
 
 export type {

@@ -27,7 +27,10 @@ import {
     AComponent,
     FunctionPostComponent,
     FuncCounter,
-    FucReduxCounterComponent
+    FucReduxCounterComponent,
+    Lesson10HostComponent,
+    Lesson9HostComponent,
+    Lesson11HostComponent
 } from "../barrel";
 import classes from "./Page.component.module.scss"
 
@@ -145,6 +148,27 @@ class PageComponent extends Component<Props, State> {
                     <FuncCounter name={"My functional Counter-1"}/>
                     <FucReduxCounterComponent/>
 
+                </details>
+
+                <details>
+                    <summary>
+                        Lesson #9
+                    </summary>
+                    <Lesson9HostComponent/>
+                </details>
+
+                <details>
+                    <summary>
+                        Lesson #10
+                    </summary>
+                    <Lesson10HostComponent/>
+                </details>
+
+                <details>
+                    <summary>
+                        Lesson #11
+                    </summary>
+                    <Lesson11HostComponent/>
                 </details>
 
             </div>
