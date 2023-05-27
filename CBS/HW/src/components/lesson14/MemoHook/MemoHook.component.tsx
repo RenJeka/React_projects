@@ -19,10 +19,12 @@ const MemoHookComponent = () => {
 
     return (
         <div>
-            <h4>Memo Hook Example</h4>
+            <h4>useMemo Hook Example</h4>
             <h5>{count}, {computed}</h5>
-            <button value={count} onClick={() => {setCount(count + 1)}}>count</button>
-            <button value={count2} onClick={() => {setCount2(count2 + 1)}}>count2</button>
+            <div style={{display: 'flex', flexDirection: 'row', width: 300}}>
+                <button value={count} onClick={() => {setCount(count + 1)}}>count</button>
+                <button value={count2} onClick={() => {setCount2(count2 + 1)}}>count2</button>
+            </div>
 
         </div>
     );
