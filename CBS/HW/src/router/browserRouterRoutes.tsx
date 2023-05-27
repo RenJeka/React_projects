@@ -23,7 +23,11 @@ import {
     ISContactsComponent,
     ISProductsComponent,
     ISProductComponent,
-    Lesson11HostComponent, AuthComponent, ErrorPage,
+    Lesson11HostComponent,
+    AuthComponent,
+    ErrorPage,
+    NotFoundPageComponent,
+    Lesson14HostComponent,
 } from '../barrel';
 import React from "react";
 
@@ -158,6 +162,20 @@ export const router = createBrowserRouter([
                     }
                 ]
             },
+            {
+                path: "/lesson-14",
+                element: <Lesson14HostComponent/>,
+                children: [
+                    {
+                        path: "auth",
+                        element: <AuthComponent/>,
+                    }
+                ]
+            },
+            {
+                path: "*",
+                element: <NotFoundPageComponent/>
+            }
 
 
         ]

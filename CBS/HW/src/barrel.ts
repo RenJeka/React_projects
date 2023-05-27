@@ -67,6 +67,10 @@ import ReactMemoParentComponent from "./components/lesson8/ReactMemoParent/React
 import ErrorBoundaryComponent from "./components/lesson10/ErrorBoundary/ErrorBoundary.component";
 import ErrorPage from "./router/ErrorPage.component";
 import ErrorGeneratorComponent from "./components/lesson10/ErrorGenerator/ErrorGenerator.component";
+import NotFoundPageComponent from "./router/NotFoundPage.component";
+import Lesson14HostComponent from "./components/lesson14/Lesson14Host.component";
+import MemoHookComponent from "./components/lesson14/MemoHook/MemoHook.component";
+import CallbackHookComponent from "./components/lesson14/CallbackHook/CallbackHook.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -136,7 +140,11 @@ export {
     ReactMemoParentComponent,
     ErrorBoundaryComponent,
     ErrorPage,
-    ErrorGeneratorComponent
+    ErrorGeneratorComponent,
+    NotFoundPageComponent,
+    Lesson14HostComponent,
+    MemoHookComponent,
+    CallbackHookComponent,
 };
 
 export type {
