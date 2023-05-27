@@ -66,6 +66,7 @@ import UseEffectComponent from "./components/lesson8/useEffect/useEffect.compone
 import ReactMemoParentComponent from "./components/lesson8/ReactMemoParent/ReactMemoParent.component";
 import ErrorBoundaryComponent from "./components/lesson10/ErrorBoundary/ErrorBoundary.component";
 import ErrorPage from "./router/ErrorPage.component";
+import ErrorGeneratorComponent from "./components/lesson10/ErrorGenerator/ErrorGenerator.component";
 
 const images = {
     reactLogo: reactLogo,
@@ -134,7 +135,8 @@ export {
     UseEffectComponent,
     ReactMemoParentComponent,
     ErrorBoundaryComponent,
-    ErrorPage
+    ErrorPage,
+    ErrorGeneratorComponent
 };
 
 export type {
